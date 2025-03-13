@@ -17,3 +17,7 @@ and spatial survey sampling techniques. My doctoral work investigates the impact
 on human and economic development in India.
 
 Check out my [Projects](/projects/) and [Publications](/publications/) to learn more.
+
+Recent Work
+=====
+* Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2024). Investigating the Segment Anything Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels. [arXiv preprint arXiv:2407.01846.](https://arxiv.org/abs/2407.01846)
