@@ -17,11 +17,10 @@ Over the years, I have worked on a range of geospatial and machine learning appl
 mapping, population modeling, and urban spatial analysis. My work aims to develop scalable, open-source 
 tools that enhance accessibility and reproducibility in geospatial research.
 
-For my doctoral work, I am
-looking at investigating the impacts of extreme weather events on human and economic development in 
+For my doctoral work, I am investigating the impacts of extreme weather events on human and economic development in 
 data-scarce regions and how satellite data and AI models can fill in gaps.
 
-Check out my [Projects](/projects/) and [Publications](/publications/) to learn more.
+Check out my [Research](/research/) and [Publications](/publications/) to learn more.
 
 Recent Work
 =====
