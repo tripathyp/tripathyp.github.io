@@ -22,6 +22,7 @@ data-scarce regions and how satellite data and AI models can fill in gaps.
 
 Check out my [Research](/research/) and [Publications](/publications/) to learn more.
 
-Recent Work
-=====
-* Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2024). Investigating the Segment Anything Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels. [arXiv preprint arXiv:2407.01846.](https://arxiv.org/abs/2407.01846)
+### Recent Work
+* Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2024). Investigating the Segment Anything 
+Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels. 
+[arXiv preprint arXiv:2407.01846.](https://arxiv.org/abs/2407.01846)
