@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Teaching & Mentoring"
 permalink: /teaching/
 author_profile: true
