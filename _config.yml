@@ -1,7 +1,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Pratyush Tripathy"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Pratyush Tripathy"
 description              : &description "personal description"
@@ -17,7 +17,7 @@ author:
   avatar           : "/headshot_pt.jpg"
   name             : "Pratyush Tripathy"
   pronouns         : "he/him/his"
-  bio              : "PhD Student working on using geospatial data and AI models for impact evaluation."
+  bio              : "I use geospatial and AI techniques to study human and environmental issues."
   location         : "Santa Barbara, CA"
   employer         : "UC Santa Barbara"
   email            : "ptripathy@ucsb.edu"
