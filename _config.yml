@@ -175,7 +175,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  talks:
+  updates:
     output: true
     permalink: /:collection/:path/
 
@@ -227,12 +227,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
+  # _updates
   - scope:
       path: ""
-      type: talks
+      type: updates
     values:
-      layout: talk
+      layout: updates
       author_profile: true
       share: true
 
