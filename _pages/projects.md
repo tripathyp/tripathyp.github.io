@@ -1,35 +1,39 @@
 ---
-layout: page
 title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
 
-The kind of projects that I have worked and/or still interested in working includes:
-- Flood mapping and impact assessment
-- Downscaling population and socio-economic indicators
-- Predicting deforestation in the Amazon 
-- Urban spatial analysis
-  - Building height mapping
-  - Urban growth models
-  - Street network analysis
+I am broadly interested in using geospatial data and machine learning for a wide range of applications. 
+Some of the key topics I have worked on or continue to explore include:
 
-Open-Source Software
+Flood Mapping & Impact Assessment  
 =====
-I am a big supporter of open-source and try to contribute as and when time permits.
-Please check the tools listed below and my [Blogs](/year-archive/).
+- Global FLood Mapper
 
-Global Flood Mapper
-------
-A Google Earth Engine application that uses Sentinel-1 SAR data for rapid flood mapping through an intuitive graphical interface.  
-[GitHub Repository](https://github.com/PratyushTripathy/global_flood_mapper) | [Live Demo](https://wbwaterdata.org/dataset/google-earth-engine-apps-flood-mapper-tool)
+Urban Spatial Analysis  
+=====
+- Building Height Mapping: Estimating city-scale building heights from satellite images  
+- Urban Growth Models: Simulating land-use change and urban expansion  
+- Street Network Analysis: Extracting road hierarchy and connectivity using COINS  
 
-pyrsgis
-------
-A Python package designed for reading, processing, and exporting GeoTIFFs. It is available on both PyPI and Anaconda, with over 185k downloads.  
-[GitHub Repository](https://github.com/PratyushTripathy/pyrsgis) | [PyPI](https://pypi.org/project/pyrsgis)
+Population & Socio-Economic Data Modeling  
+=====
+- Downscaling gridded population data for improved flood exposure estimates 
 
-COINS (COntinuity IN Street Networks)
-------
-An automated tool to generate street hierarchies from raw OpenStreetMap data. Integrated into the MomePy package, it offers significant performance improvements.  
-[GitHub Repository](https://github.com/PratyushTripathy/COINS) | [MomePy Integration](http://docs.momepy.org/en/v0.7.2/generated/momepy.COINS.html)
+Predicting Deforestation & Land Cover Change  
+=====
+- Applying deep learning models to predict deforestation in the Amazon  
+
+---
+
+## Open-Source Contributions  
+I am passionate about open-source geospatial software development and have created tools to support 
+research and real-world applications. Some of my notable projects include:  
+
+- [PyRSGIS](https://github.com/PratyushTripathy/pyrsgis) – A Python package for raster data processing, soon to include ML workflows for geospatial analysis  
+- [Global Flood Mapper](https://github.com/PratyushTripathy/global_flood_mapper) – A Google Earth Engine tool for rapid flood mapping  
+- [COINS](https://github.com/PratyushTripathy/COINS) – A Python-based tool for street network continuity analysis  
+
+I am always looking to improve and expand these tools. If you're interested in collaboration or have ideas,
+feel free to reach out!  
