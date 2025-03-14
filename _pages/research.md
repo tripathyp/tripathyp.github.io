@@ -8,7 +8,7 @@ I am broadly interested in using geospatial data and machine learning for a wide
 Some of the key topics I have worked on or continue to explore include:
 
 ## Flood Mapping & Impact Assessment  
-- Global FLood Mapper
+- Global Flood Mapper
 
 ## Urban Spatial Analysis  
 - Building Height Mapping: Estimating city-scale building heights from satellite images  

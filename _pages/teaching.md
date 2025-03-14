@@ -22,5 +22,5 @@ Planning and Design, in Collaboration (APD), IIT(BHU) Varanasi, November 23, 202
 
 Courses Taught at Indian Institute for Human Settlements
 ------
-- UFP SKILL LAB: Working with Spatial Data
-- UFP ELECTIVES: Advanced GIS
+- Working with Spatial Data, Skill Lab for the Urban Fellowship Program
+- Advanced GIS, Electives for the Urban Fellowship Program
