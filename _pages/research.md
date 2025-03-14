@@ -7,27 +7,23 @@ author_profile: true
 I am broadly interested in using geospatial data and machine learning for a wide range of applications. 
 Some of the key topics I have worked on or continue to explore include:
 
-Flood Mapping & Impact Assessment  
-=====
+## Flood Mapping & Impact Assessment  
 - Global FLood Mapper
 
-Urban Spatial Analysis  
-=====
+## Urban Spatial Analysis  
 - Building Height Mapping: Estimating city-scale building heights from satellite images  
 - Urban Growth Models: Simulating land-use change and urban expansion  
 - Street Network Analysis: Extracting road hierarchy and connectivity using COINS  
 
-Population & Socio-Economic Data Modeling  
-=====
+## Population & Socio-Economic Data Modeling  
 - Downscaling gridded population data for improved flood exposure estimates 
 
-Predicting Deforestation & Land Cover Change  
-=====
+## Predicting Deforestation & Land Cover Change
 - Applying deep learning models to predict deforestation in the Amazon  
 
 ---
 
-## Open-Source Contributions  
+## Open-Source Tools  
 I am passionate about open-source geospatial software development and have created tools to support 
 research and real-world applications. Some of my notable projects include:  
 
