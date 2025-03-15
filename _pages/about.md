@@ -9,18 +9,16 @@ redirect_from:
 
 
 Hi, I’m Pratyush Tripathy, a PhD student in the Department of Geography at the University of California, 
-Santa Barbara. My research focuses on integrating geospatial data, remote sensing, and machine learning 
-to address critical environmental and societal challenges. I am particularly interested in using AI 
-models to fill data gaps and enable large-scale analyses that are otherwise infeasible.
+Santa Barbara. My research focuses on integrating geospatial data and machine learning 
+to investigate critical environmental and societal challenges. I am particularly interested in using AI 
+models to fill data gaps and enable critical analyses that are otherwise infeasible.
 
-Over the years, I have worked on a range of geospatial and machine learning applications, including flood 
-mapping, population modeling, and urban spatial analysis. My work aims to develop scalable, open-source 
-tools that enhance accessibility and reproducibility in geospatial research.
+Over the years, I have worked on a range of geospatial applications, including flood mapping using
+satellite datasets, census data disaggregation, and urban  analysis. For my doctoral work, I am 
+investigating the impacts of extreme weather events on human and economic development in  data-scarce
+regions and how satellite data and AI models can help fill data gaps to present new insights.
 
-For my doctoral work, I am investigating the impacts of extreme weather events on human and economic development in 
-data-scarce regions and how satellite data and AI models can fill in gaps.
-
-Check out my [Research](/research/) and [Publications](/publications/) to learn more.
+To learn more, please check my [Research](/research/) and [Publications](/publications/).
 
 ### Recent Work
 * Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2024). Investigating the Segment Anything 
