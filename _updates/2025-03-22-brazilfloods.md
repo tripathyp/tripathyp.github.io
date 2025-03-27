@@ -1,5 +1,5 @@
 ---
-title: "New article on Mapping the extent and impacts of 2024 Brazil Floods"
+title: "New article on mapping the extent and impacts of 2024 Brazil Floods"
 collection: updates
 type: "Journal Article"
 venue: "Natural Hazards Research"
