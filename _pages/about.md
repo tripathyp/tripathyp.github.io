@@ -21,6 +21,8 @@ regions and how satellite data and AI models can help fill data gaps to present 
 To learn more, please check my [Research](/research/) and [Publications](/publications/).
 
 ### Recent Work
+* Rathore, J., Kumari, S., Tripathy, P., Mahto, S. S., & Lal, P. (2025). 2024 Brazil Floods: Mapping the extent and impacts in Eastern Rio Grande do Sul using geospatial techniques. Natural Hazards Research. https://doi.org/10.1016/j.nhres.2025.03.011
+
 * Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2024). Investigating the Segment Anything 
 Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels. 
 [arXiv preprint arXiv:2407.01846.](https://arxiv.org/abs/2407.01846)
