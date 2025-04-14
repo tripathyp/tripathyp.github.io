@@ -65,11 +65,15 @@
       {% if author.webofscience %}
         <li>
           <a href="{{ author.webofscience }}">
-            <img src="{{ '/assets/icons/clarivate.svg' | relative_url }}" alt="Web of Science" style="height:1em; vertical-align:middle;" class="icon-pad-right">
-            <span>Web of Science</span>
+            <img src="{{ '/assets/icons/clarivate.svg' | relative_url }}"
+                 alt="Web of Science"
+                 style="height:1em; vertical-align:middle; margin-right:0.3em;"
+                 class="icon-pad-right">
           </a>
+          Web of Science
         </li>
       {% endif %}
+
 
 
       <!-- Font Awesome icons / Repositories and software development -->
