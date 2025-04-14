@@ -416,12 +416,6 @@
 .ai-scopus-square:before {
   content: "\e91f";
 }
-.ai-webofscience:before {
-  content: "\e91e";
-}
-.ai-webofscience-square:before {
-  content: "\e91f";
-}
 .ai-semantic-scholar:before {
   content: "\e96e";
 }
