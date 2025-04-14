@@ -63,8 +63,14 @@
         <li><a href="{{ author.scopus }}"><i class="ai ai-scopus icon-pad-right"></i>Scopus</a></li>
       {% endif %}
       {% if author.webofscience %}
-        <li><a href="{{ author.webofscience }}"><i class="ai ai-webofscience icon-pad-right"></i>Web of Science</a></li>
+        <li>
+          <a href="{{ author.webofscience }}">
+            <img src="{{ '/assets/icons/clarivate.svg' | relative_url }}" alt="Web of Science" style="height:1em; vertical-align:middle;" class="icon-pad-right">
+            Web of Science
+          </a>
+        </li>
       {% endif %}
+
 
       <!-- Font Awesome icons / Repositories and software development -->
       {% if author.bitbucket %}
