@@ -53,6 +53,7 @@ author_profile: true
         border-radius: 0.2rem;
         margin: 0 0.2rem 0 0;
         text-transform: capitalize;
+        background-color: #6c757d; /* fallback grey */
     }
 </style>
 
@@ -178,15 +179,16 @@ author_profile: true
     </tbody>
 </table>
 
-<!-- Include Tablesort for click-to-sort -->
+<!-- Tablesort for click-to-sort -->
 <script src="https://unpkg.com/tablesort@5.2.1/dist/tablesort.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    (() => {
+    // 1) activate Tablesort
     new Tablesort(document.getElementById('journalArticlesTable'));
     new Tablesort(document.getElementById('preprintsTable'));
     new Tablesort(document.getElementById('bookChaptersTable'));
 
-    // Dynamic tag coloring
+    // 2) palette & dynamic coloring
     const palette = [
     '#2a9d8f','#e76f51','#0288d1','#f4a261','#264653',
     '#e9c46a','#8a2be2','#d62828','#6c757d','#ff6b6b',
@@ -195,17 +197,16 @@ author_profile: true
     '#1b998b','#2f4858','#ffbf69','#003049','#8d99ae','#ef476f'
     ];
     const tagColors = {};
+    let nextColorIndex = 0;
+
     document.querySelectorAll('.badge').forEach(el => {
-    const classes = el.className.split(/\s+/);
-    const tagClass = classes.find(c => c.startsWith('tag-'));
-    if (tagClass) {
-    const slug = tagClass.replace('tag-','');
+    const cls = Array.from(el.classList).find(c => c.startsWith('tag-'));
+    if (!cls) return;
+    const slug = cls.replace('tag-','');
     if (!tagColors[slug]) {
-    const index = Object.keys(tagColors).length % palette.length;
-    tagColors[slug] = palette[index];
+    tagColors[slug] = palette[nextColorIndex++ % palette.length];
     }
     el.style.backgroundColor = tagColors[slug];
-    }
     });
-    });
+    })();
 </script>
