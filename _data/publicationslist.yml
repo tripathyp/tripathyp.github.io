@@ -1,0 +1,120 @@
+- title: "Geographically Weighted Logistic Regression to measure the role of Intra-Urban Drivers for urban growth modelling in Kathmandu, Central Himalayas"
+  authors: "Diksha, Kumar, A. & Tripathy, P."
+  year: 2023
+  url: "https://doi.org/10.1007/s10661-023-11164-2"
+  category: "journal"
+  tags:
+    - "urban growth modeling"
+    - "urban analysis"
+
+- title: "Evaluating the impact of water protection policy on urban growth: A case study of Jiaxing"
+  authors: "Guan, C., Gómez, J. A., Tripathy, P., Duque, J. C., Passos, S., Cheng, T. & Keith, M."
+  year: 2023
+  url: "https://doi.org/10.1177/23998083231163182"
+  category: "journal"
+  tags:
+    - "urban growth modeling"
+    - "urban analysis"
+
+- title: "Global Flood Mapper: A novel Google Earth Engine application for rapid flood mapping using Sentinel-1 SAR"
+  authors: "Tripathy, P. & Malladi, T."
+  year: 2022
+  url: "https://doi.org/10.1007/s11069-022-05428-2"
+  category: "journal"
+  tags:
+    - "Floods"
+    - "Google Earth Engine"
+    - "Sentinel-1 SAR"
+
+- title: "Generating megacity-scale building height maps without DGNSS surveyed GCPs: An open-source approach"
+  authors: "Tripathy, P., Balakrishnan, K., de Franchis, C., & Kumar, A."
+  year: 2022
+  url: "https://doi.org/10.1177/23998083221084990"
+  category: "journal"
+  tags:
+    - "urban analysis"
+    - "building height"
+
+- title: "Analysing Urban Damage and Surface Deformation based hazard-risk in Kathmandu City during the 2015 Nepal Earthquake using SAR Interferometry"
+  authors: "Kumar, A., Manisha, M., Lal, P., Prasad, A., Tripathy, P., & Saikia, P."
+  year: 2022
+  url: "https://doi.org/10.1016/j.asr.2022.02.003"
+  category: "journal"
+  tags:
+    - "urban analysis"
+    - "SAR interferometry"
+    - "Sentinel-1 SAR"
+
+- title: "Drivers of air pollution variability during the second wave of COVID-19 in Delhi, India"
+  authors: "Saharan, U. S., Kumar, R., Tripathy, P., Sateesh, M., Garg, J., Sharma, S. K., & Mandal, T. K."
+  year: 2021
+  url: "https://doi.org/10.1016/j.uclim.2021.101059"
+  category: "journal"
+  tags:
+    - "urban analysis"
+    - "air pollution"
+
+- title: "Analyzing the Spatiotemporal Uncertainty in Urbanization Predictions"
+  authors: "Gómez, J. A., Guan, C., Tripathy, P., Duque, J. C., Passos, S., Keith, M., & Liu, J."
+  year: 2021
+  url: "https://doi.org/10.3390/rs13030512"
+  category: "journal"
+  tags:
+    - "urban growth modeling"
+    - "urban analysis"
+
+- title: "An open-source tool to extract natural continuity and hierarchy of urban street networks"
+  authors: "Tripathy, P., Rao, P., Balakrishnan, K., & Malladi, T."
+  year: 2021
+  url: "http://dx.doi.org/10.1177/2399808320967680"
+  category: "journal"
+  tags:
+    - "urban analysis"
+    - "street network"
+
+- title: "Monitoring and modelling spatio-temporal urban growth of Delhi using Cellular Automata and geoinformatics"
+  authors: "Tripathy, P. & Kumar, A."
+  year: 2019
+  url: "https://doi.org/10.1016/j.cities.2019.01.021"
+  category: "journal"
+  tags:
+    - "urban growth modeling"
+    - "urban analysis"
+
+- title: "Investigating the Segment Anything Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels"
+  authors: "Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R."
+  year: 2024
+  url: "https://arxiv.org/abs/2407.01846"
+  category: "preprint"
+  tags:
+    - "agriculture"
+    - "foundation models"
+    - "vision transformers"
+
+- title: "Global Built-up and Population Datasets: Which ones should you use for India?"
+  authors: "Tripathy, P. & Balakrishnan, K."
+  year: 2021
+  url: "https://arxiv.org/abs/2108.08304"
+  category: "preprint"
+  tags:
+    - "population downscaling"
+
+- title: "A CNN based method for sub-pixel urban land cover mapping using Landsat 5 TM and Resourcesat 1 - LISS IV imagery"
+  authors: "Kumar, P. K., Balakrishnan, K. & Tripathy, P."
+  year: 2021
+  url: "https://arxiv.org/abs/2112.08841"
+  category: "preprint"
+  tags:
+    - "urban land cover"
+    - "urban analysis"
+    - "neural networks"
+
+- title: "Deep learning approach for monitoring urban land cover changes"
+  authors: "Perikamana, K. K., Balakrishnan, K., & Tripathy, P."
+  year: 2024
+  url: "https://doi.org/10.1016/B978-0-323-99164-3.00003-3"
+  category: "book"
+  tags:
+    - "urban land cover"
+    - "neural networks"
+    - "urban analysis"
