@@ -5,32 +5,207 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<!-- Uniform column widths, reduced width, and badge styling -->
+<style>
+    .table-striped {
+        table-layout: fixed;
+        width: 80%;
+        margin: 0;
+    }
 
+        .table-striped th:nth-child(1),
+        .table-striped td:nth-child(1) {
+            width: 25%;
+        }
 
+        .table-striped th:nth-child(2),
+        .table-striped td:nth-child(2) {
+            width: 5%;
+        }
 
+        .table-striped th:nth-child(3),
+        .table-striped td:nth-child(3) {
+            width: 40%;
+        }
+
+        .table-striped th:nth-child(4),
+        .table-striped td:nth-child(4) {
+            width: 20%;
+        }
+
+        .table-striped th:nth-child(5),
+        .table-striped td:nth-child(5) {
+            width: 10%;
+        }
+
+    th {
+        cursor: pointer;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 0.2em 0.4em;
+        font-size: 75%;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 0.2rem;
+        margin: 0 0.2rem 0 0;
+        text-transform: capitalize;
+    }
+</style>
+
+{% assign publications = site.data.publicationslist %}
+
+<h2>Journal Articles</h2>
+<table id="journalArticlesTable" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Title</th>
+            <th>Tags</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pub in publications %}
+        {% if pub.category == "journal" %}
+        <tr>
+            <td>{{ pub.authors }}</td>
+            <td>{{ pub.year }}</td>
+            <td>{{ pub.title }}</td>
+            <td>
+                {% if pub.tags %}
+                {% for tag in pub.tags %}
+                {%- assign slug = tag
+                | downcase
+                | replace: ' ', '-'
+                | replace: '/', '-' -%}
+                <span class="badge tag-{{ slug }}">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ pub.url }}" target="_blank">
+                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
+                </a>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Preprints</h2>
+<table id="preprintsTable" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Title</th>
+            <th>Tags</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pub in publications %}
+        {% if pub.category == "preprint" %}
+        <tr>
+            <td>{{ pub.authors }}</td>
+            <td>{{ pub.year }}</td>
+            <td>{{ pub.title }}</td>
+            <td>
+                {% if pub.tags %}
+                {% for tag in pub.tags %}
+                {%- assign slug = tag
+                | downcase
+                | replace: ' ', '-'
+                | replace: '/', '-' -%}
+                <span class="badge tag-{{ slug }}">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ pub.url }}" target="_blank">
+                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
+                </a>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Book Chapters</h2>
+<table id="bookChaptersTable" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Title</th>
+            <th>Tags</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pub in publications %}
+        {% if pub.category == "book" %}
+        <tr>
+            <td>{{ pub.authors }}</td>
+            <td>{{ pub.year }}</td>
+            <td>{{ pub.title }}</td>
+            <td>
+                {% if pub.tags %}
+                {% for tag in pub.tags %}
+                {%- assign slug = tag
+                | downcase
+                | replace: ' ', '-'
+                | replace: '/', '-' -%}
+                <span class="badge tag-{{ slug }}">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ pub.url }}" target="_blank">
+                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
+                </a>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Include Tablesort for click-to-sort -->
+<script src="https://unpkg.com/tablesort@5.2.1/dist/tablesort.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    new Tablesort(document.getElementById('journalArticlesTable'));
+    new Tablesort(document.getElementById('preprintsTable'));
+    new Tablesort(document.getElementById('bookChaptersTable'));
+
+    // Dynamic tag coloring
+    const palette = [
+    '#2a9d8f','#e76f51','#0288d1','#f4a261','#264653',
+    '#e9c46a','#8a2be2','#d62828','#6c757d','#ff6b6b',
+    '#4a4e69','#a5a58d','#457b9d','#2b9348','#dda15e',
+    '#577590','#bc6c25','#003f5c','#ffa600','#9a031e',
+    '#1b998b','#2f4858','#ffbf69','#003049','#8d99ae','#ef476f'
+    ];
+    const tagColors = {};
+    document.querySelectorAll('.badge').forEach(el => {
+    const classes = el.className.split(/\s+/);
+    const tagClass = classes.find(c => c.startsWith('tag-'));
+    if (tagClass) {
+    const slug = tagClass.replace('tag-','');
+    if (!tagColors[slug]) {
+    const index = Object.keys(tagColors).length % palette.length;
+    tagColors[slug] = palette[index];
+    }
+    el.style.backgroundColor = tagColors[slug];
+    }
+    });
+    });
+</script>
