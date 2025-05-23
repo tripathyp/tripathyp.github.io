@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-22T23:33:44-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Home</title><subtitle>personal description</subtitle><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><entry><title type="html">Future Blog Post</title><link href="http://localhost:4000/posts/2012/08/blog-post-4/" rel="alternate" type="text/html" title="Future Blog Post" /><published>2199-01-01T00:00:00-07:00</published><updated>2199-01-01T00:00:00-07:00</updated><id>http://localhost:4000/posts/2012/08/future-post</id><content type="html" xml:base="http://localhost:4000/posts/2012/08/blog-post-4/"><![CDATA[<p>This post will show up by default. To disable scheduling of future posts, edit <code class="language-plaintext highlighter-rouge">config.yml</code> and set <code class="language-plaintext highlighter-rouge">future: false</code>.</p>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="cool posts" /><category term="category1" /><category term="category2" /><summary type="html"><![CDATA[This post will show up by default. To disable scheduling of future posts, edit config.yml and set future: false.]]></summary></entry><entry><title type="html">Building and Evaluating a Machine Learning Model</title><link href="http://localhost:4000/blog/CNN-for-Landsat/" rel="alternate" type="text/html" title="Building and Evaluating a Machine Learning Model" /><published>2025-03-12T00:00:00-07:00</published><updated>2025-03-12T00:00:00-07:00</updated><id>http://localhost:4000/blog/CNN-for-Landsat</id><content type="html" xml:base="http://localhost:4000/blog/CNN-for-Landsat/"><![CDATA[<!-- Navigation Links for Sections -->
+<div class="section-navigation">
+  <a href="#background" class="nav-link">Background</a>
+  <a href="#data-prep" class="nav-link">Data Preparation</a>
+  <a href="#model-building" class="nav-link">Building &amp; Training Model</a>
+  <a href="#evaluation" class="nav-link">Evaluating Results</a>
+  <a href="#cautions" class="nav-link">Cautions</a>
+</div>
+
+<!-- Section: Background -->
+<div id="background" class="book-section">
+  <h2>Background</h2>
+  <p>
+    In this project, we explore the development of a machine learning model to predict housing prices.
+    Accurate price prediction can help investors, policymakers, and urban planners make informed decisions.
+  </p>
+  <h3>Problem Statement</h3>
+  <p>
+    Housing price prediction is challenging due to the multifaceted nature of real estate markets and varying economic factors.
+  </p>
+  <h3>Motivation</h3>
+  <p>
+    With the availability of large datasets and advanced machine learning techniques, we aim to build a robust model that balances complexity with interpretability.
+  </p>
+</div>
+
+<!-- Section: Data Preparation -->
+<div id="data-prep" class="book-section">
+  <h2>Data Preparation</h2>
+  <p>
+    Data preparation is the foundation of a successful machine learning project. In this section, we load, clean, and preprocess our dataset.
+  </p>
+  <h3>Loading the Data</h3>
+  <p>
+    We use <code>pandas</code> to read in our CSV file containing housing data.
+  </p>
+  <div class="code-demo">
+    <pre><code class="language-python">
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('housing_prices.csv')
+print(data.head())
+    </code></pre>
+    <button class="copy-btn">Copy Code</button>
+  </div>
+  <h3>Data Cleaning</h3>
+  <p>
+    Next, we handle missing values and encode categorical variables.
+  </p>
+  <div class="code-demo">
+    <pre><code class="language-python">
+# Fill missing values using forward fill
+data.fillna(method='ffill', inplace=True)
+
+# Convert categorical variables using one-hot encoding
+data = pd.get_dummies(data, drop_first=True)
+    </code></pre>
+    <button class="copy-btn">Copy Code</button>
+  </div>
+</div>
+
+<!-- Section: Building and Training Model -->
+<div id="model-building" class="book-section">
+  <h2>Building &amp; Training Model</h2>
+  <p>
+    In this section, we build a machine learning model using scikit-learn, split the data, and train a Random Forest Regressor.
+  </p>
+  <h3>Model Building</h3>
+  <p>
+    We use a Random Forest Regressor to capture complex interactions in the data.
+  </p>
+  <div class="code-demo">
+    <pre><code class="language-python">
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+
+# Separate features and target variable
+X = data.drop('price', axis=1)
+y = data['price']
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train the Random Forest model
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+    </code></pre>
+    <button class="copy-btn">Copy Code</button>
+  </div>
+  <h3>Training Details</h3>
+  <p>
+    We carefully tune the model parameters to avoid overfitting and ensure that the model generalizes well to unseen data.
+  </p>
+</div>
+
+<!-- Section: Evaluating Results -->
+<div id="evaluation" class="book-section">
+  <h2>Evaluating Results</h2>
+  <p>
+    After training the model, we assess its performance using standard evaluation metrics.
+  </p>
+  <h3>Performance Metrics</h3>
+  <p>
+    We use Mean Absolute Error (MAE) and R-squared to measure the model's accuracy.
+  </p>
+  <div class="code-demo">
+    <pre><code class="language-python">
+from sklearn.metrics import mean_absolute_error, r2_score
+
+# Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Calculate evaluation metrics
+mae = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print("Mean Absolute Error:", mae)
+print("R-squared:", r2)
+    </code></pre>
+    <button class="copy-btn">Copy Code</button>
+  </div>
+  <h3>Interpretation</h3>
+  <p>
+    A lower MAE and a higher R-squared indicate a better model performance. However, these metrics must be interpreted in the context of the data and the problem domain.
+  </p>
+</div>
+
+<!-- Section: Cautions -->
+<div id="cautions" class="book-section">
+  <h2>Cautions</h2>
+  <p>
+    Despite promising results, there are important cautions to consider:
+  </p>
+  <ul>
+    <li><strong>Data Quality:</strong> Ensure your dataset is comprehensive and free from significant biases.</li>
+    <li><strong>Overfitting:</strong> Validate your model using cross-validation to ensure it generalizes well.</li>
+    <li><strong>Interpretability:</strong> Complex models can be difficult to interpret; consider simpler models for more transparent insights.</li>
+    <li><strong>Ethical Considerations:</strong> Use predictions responsibly, particularly in areas impacting economic and social decisions.</li>
+  </ul>
+</div>
+
+<!-- Navigation Arrows -->
+<div class="section-arrows">
+  <button id="prev-section">← Previous</button>
+  <button id="next-section">Next →</button>
+</div>
+
+<!-- Inline CSS Styles -->
+<style>
+.book-section {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.code-demo {
+  position: relative;
+  background: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.section-arrows {
+  text-align: center;
+  margin-top: 20px;
+}
+.section-arrows button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+.section-navigation {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-navigation .nav-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+</style>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="blog" /><summary type="html"><![CDATA[Background Data Preparation Building &amp; Training Model Evaluating Results Cautions]]></summary></entry><entry><title type="html">Blog Post number 4</title><link href="http://localhost:4000/posts/2012/08/blog-post-4/" rel="alternate" type="text/html" title="Blog Post number 4" /><published>2015-08-14T00:00:00-07:00</published><updated>2015-08-14T00:00:00-07:00</updated><id>http://localhost:4000/posts/2012/08/blog-post-4</id><content type="html" xml:base="http://localhost:4000/posts/2012/08/blog-post-4/"><![CDATA[<p>This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.</p>
+
+<h1 id="headings-are-cool">Headings are cool</h1>
+
+<h1 id="you-can-have-many-headings">You can have many headings</h1>
+
+<h2 id="arent-headings-cool">Aren’t headings cool?</h2>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="cool posts" /><category term="category1" /><category term="category2" /><summary type="html"><![CDATA[This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.]]></summary></entry><entry><title type="html">Blog Post number 3</title><link href="http://localhost:4000/posts/2014/08/blog-post-3/" rel="alternate" type="text/html" title="Blog Post number 3" /><published>2014-08-14T00:00:00-07:00</published><updated>2014-08-14T00:00:00-07:00</updated><id>http://localhost:4000/posts/2014/08/blog-post-3</id><content type="html" xml:base="http://localhost:4000/posts/2014/08/blog-post-3/"><![CDATA[<p>This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.</p>
+
+<p>Below is a sample code snippet</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># this is a sample comment
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span></code></pre></figure>
+
+<h1 id="headings-are-cool">Headings are cool</h1>
+
+<h1 id="you-can-have-many-headings">You can have many headings</h1>
+
+<h2 id="arent-headings-cool">Aren’t headings cool?</h2>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="remote sensing" /><category term="classification" /><category term="land cover" /><category term="machine learning" /><category term="neural networks" /><summary type="html"><![CDATA[This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.]]></summary></entry><entry><title type="html">Blog Post number 2</title><link href="http://localhost:4000/posts/2013/08/blog-post-2/" rel="alternate" type="text/html" title="Blog Post number 2" /><published>2013-08-14T00:00:00-07:00</published><updated>2013-08-14T00:00:00-07:00</updated><id>http://localhost:4000/posts/2013/08/blog-post-2</id><content type="html" xml:base="http://localhost:4000/posts/2013/08/blog-post-2/"><![CDATA[<p>This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.</p>
+
+<h1 id="headings-are-cool">Headings are cool</h1>
+
+<h1 id="you-can-have-many-headings">You can have many headings</h1>
+
+<h2 id="arent-headings-cool">Aren’t headings cool?</h2>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="cool posts" /><category term="category1" /><category term="category2" /><summary type="html"><![CDATA[This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.]]></summary></entry><entry><title type="html">Blog Post number 1</title><link href="http://localhost:4000/posts/2012/08/blog-post-1/" rel="alternate" type="text/html" title="Blog Post number 1" /><published>2012-08-14T00:00:00-07:00</published><updated>2012-08-14T00:00:00-07:00</updated><id>http://localhost:4000/posts/2012/08/blog-post-1</id><content type="html" xml:base="http://localhost:4000/posts/2012/08/blog-post-1/"><![CDATA[<p>This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.</p>
+
+<h1 id="headings-are-cool">Headings are cool</h1>
+
+<h1 id="you-can-have-many-headings">You can have many headings</h1>
+
+<h2 id="arent-headings-cool">Aren’t headings cool?</h2>]]></content><author><name>Pratyush Tripathy</name><email>ptripathy@ucsb.edu</email></author><category term="cool posts" /><category term="category1" /><category term="category2" /><summary type="html"><![CDATA[This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.]]></summary></entry></feed>

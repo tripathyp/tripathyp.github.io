@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research and Publications by Pratyush Tripathy, PhD Student in Geography at UCSB focused on remote sensing, machine learning, and automated workflows.">
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Research & Publications | Pratyush Tripathy">
+  <meta property="og:description" content="Explore the research interests, current projects, grants, and publications of Pratyush Tripathy.">
+  <meta property="og:image" content="media/headshot_pt.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://yourwebsite.com/publications.html">
+
+  <title>Research & Publications | Pratyush Tripathy</title>
+  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    /* Base Styles */
+    body {
+      background-color: #fff;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header, footer {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .navbar {
+      background-color: #fff;
+    }
+    .navbar-brand, .nav-link {
+      color: #333 !important;
+      transition: color 0.3s ease;
+    }
+    .navbar-brand:hover, .nav-link:hover {
+      color: #007BFF !important;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e9ecef;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Section Styles */
+    section {
+      padding: 60px 0;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    /* Card Styles for Research Projects */
+    .card {
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    /* Button Styles */
+    .btn {
+      background-color: #007BFF;
+      border: none;
+      color: #fff;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      background-color: #0056b3;
+    }
+    /* Grants & Fellowships */
+    .grants-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .grants-list li {
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+    }
+    /* Publications List */
+    .publication-item {
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .publication-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .publication-item h5 {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Pratyush Tripathy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Research &amp; Publications</h1>
+      <p>Explore my work at the intersection of remote sensing, machine learning, and automated workflows – from current research projects and grants to peer-reviewed publications.</p>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="interests">
+      <div class="container">
+        <h2>Research Interests</h2>
+        <p class="lead text-center">
+          My research integrates remote sensing technologies with machine learning to develop innovative, automated workflows for geospatial data analysis. This work addresses challenges in urban development, environmental monitoring, and disaster management.
+        </p>
+      </div>
+    </section>
+
+    <!-- Current Research projects.md -->
+    <section id="current-projects">
+      <div class="container">
+        <h2>Current Research Projects</h2>
+        <div class="row">
+          <!-- Project Card 1: Global Flood Mapper -->
+          <div class="col-md-4">
+            <div class="card animate-on-scroll">
+              <img src="media/research1.jpg" class="card-img-top" alt="Global Flood Mapper">
+              <div class="card-body">
+                <h5 class="card-title">Global Flood Mapper</h5>
+                <p class="card-text">A Google Earth Engine application for rapid flood mapping using Sentinel-1 SAR data.</p>
+                <a href="projects.html#global-flood-mapper" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2: pyrsgis -->
+          <div class="col-md-4">
+            <div class="card animate-on-scroll">
+              <img src="media/research2.jpg" class="card-img-top" alt="pyrsgis">
+              <div class="card-body">
+                <h5 class="card-title">pyrsgis</h5>
+                <p class="card-text">A Python package for reading, processing, and exporting GeoTIFFs, with over 185k downloads on PyPI and Anaconda.</p>
+                <a href="projects.html#pyrsgis" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3: COINS -->
+          <div class="col-md-4">
+            <div class="card animate-on-scroll">
+              <img src="media/research3.jpg" class="card-img-top" alt="COINS">
+              <div class="card-body">
+                <h5 class="card-title">COINS</h5>
+                <p class="card-text">An automated tool for generating street hierarchy from raw OSM data, integrated into the MomePy package.</p>
+                <a href="projects.html#coins" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grants & Fellowships -->
+    <section id="grants" style="background-color: #e9ecef;">
+      <div class="container">
+        <h2>Grants &amp; Fellowships</h2>
+        <ul class="grants-list">
+          <li>
+            <strong>UCSB Department of Geography Summer Research Fellowship</strong> – $7,000 (June 2024)
+          </li>
+          <li>
+            <strong>Schmidt Family Foundation Research Accelerator Award</strong> – $8,000 (October 2023)<br>
+            <em>Mapping Smallholder Agriculture Field Boundaries in the Indo-Gangetic Plain, India</em>
+          </li>
+          <li>
+            <strong>Benioff Applied Environmental Science Summer Fellowship</strong> – $6,000 (April 2023)<br>
+            <em>Using Satellites and AI to Map Smallholder Agriculture Field Boundaries With Limited Training Data</em>
+          </li>
+          <li>
+            <strong>GEO - Microsoft Planetary Computer</strong> – $120,000 (2021)<br>
+            <em>India Flood Monitoring and Impact Assessment Portal (IFMIAP)</em>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research Publications -->
+    <section id="publications">
+      <div class="container">
+        <h2>Recent Publications</h2>
+        <div class="publication-item animate-on-scroll">
+          <h5>Diksha, Kumar, A. &amp; Tripathy, P. (2023)</h5>
+          <p>Geographically Weighted Logistic Regression to measure the role of intra-urban drivers for urban growth modelling in Kathmandu, Central Himalayas. <a href="https://doi.org/10.1007/s10661-023-11164-2" target="_blank">DOI Link</a></p>
+        </div>
+        <div class="publication-item animate-on-scroll">
+          <h5>Guan, C., Gómez, J. A., Tripathy, P., et al. (2023)</h5>
+          <p>Evaluating the impact of water protection policy on urban growth: A case study of Jiaxing. <a href="https://doi.org/10.1177/23998083231163182" target="_blank">DOI Link</a></p>
+        </div>
+        <div class="publication-item animate-on-scroll">
+          <h5>Tripathy, P. &amp; Malladi, T. (2022)</h5>
+          <p>Global Flood Mapper: A novel Google Earth Engine application for rapid flood mapping using Sentinel-1 SAR. <a href="https://doi.org/10.1007/s11069-022-05428-2" target="_blank">DOI Link</a></p>
+        </div>
+        <p class="text-center">
+          For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=cpHC_JgAAAAJ" target="_blank">Google Scholar</a> page.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 Pratyush Tripathy | All rights reserved</p>
+      <p>
+        <a href="https://scholar.google.com/citations?user=cpHC_JgAAAAJ" target="_blank" style="color:#007BFF;">Google Scholar</a> |
+        <a href="https://www.linkedin.com/in/pratyush-tripathy-b28a47146/" target="_blank" style="color:#007BFF;">LinkedIn</a> |
+        <a href="https://github.com/PratyushTripathy" target="_blank" style="color:#007BFF;">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Intersection Observer for smooth scroll animations on cards, publications, and list items
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
