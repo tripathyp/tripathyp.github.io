@@ -159,16 +159,9 @@
       <div class="page__inner-wrap">
         <header>
           <h1 class="page__title" itemprop="headline">Flood Mapping Using Machine Learning at NeurIPS 2025</h1>
-
-          <img src="images/neurips2025_banner.jpeg"
-               alt="Flood Mapping at NeurIPS 2025"
-               style="width:50%; max-width:50%; margin-top:1rem; margin-bottom:1.5rem; border-radius:6px;">
         </header>
 
-
         <section class="page__content" itemprop="text">
-
-          <h3>Flood Mapping Tutorial (Climate Change AI)</h3>
 
           <p>
             <strong>Date:</strong> December 07, 2025<br>
@@ -176,31 +169,37 @@
           </p>
 
           <p>
-            I will be conducting a hands-on tutorial titled
-            <em>Flood mapping with optical and microwave satellite data: from indices to machine learning</em>
-            at NeurIPS 2025 as part of the Climate Change AI
-            <em>Tackling Climate Change with Machine Learning</em> track.
+            My participation in NeurIPS 2025 at the Climate Change AI's
+            <em>Tackling Climate Change with Machine Learning</em> tutorial track
+            is part of my ongoing research on floods, which is supported by NASA
+            through their FINESST program. At CCAI's workshop, I focus on practical
+            approaches for mapping floods using optical and microwave satellite datasets.
+            I demonstrate traditiona ways to map floods using satellite datasets, the
+            problems associated with them and how using machine learning partly overcomes
+            those challenges. You can find more about my session and the CCAI's workshop
+            here:<br>
+              <a href="https://www.climatechange.ai/papers/neurips2025/120">
+                https://www.climatechange.ai/papers/neurips2025/120
+              </a>
           </p>
 
           <p>
-            The tutorial focuses on practical approaches for mapping floods using MODIS, Sentinel-2, and Sentinel-1.
-            We move from simple index-based and anomaly-based methods to scalable machine learning approaches designed
-            for global application.
+            I actively work on flood mapping using satellite data and have developed both
+            browser-based tools and Python packages for this purpose. If you are interested
+            in mapping floods using Sentinel-1 SAR data without dealing with the complexities
+            of microwave remote sensing or low-level programming, my browser-based application,
+            Global Flood Mapper, may be useful. For automated flood mapping across time and
+            space using Sentinel-1 SAR, my Python package AutoFloods is designed to support
+            scalable workflows. The package is in its final development stage and will be
+            publicly released soon.
           </p>
 
-          <p>
-            Full tutorial details are available here:<br>
-            <a href="https://www.climatechange.ai/papers/neurips2025/120">
-              https://www.climatechange.ai/papers/neurips2025/120
-            </a>
-          </p>
 
           <h3>Global Flood Mapper (GFM)</h3>
 
           <p>
-            The tutorial is closely aligned with my work on GFM,
-            an end-to-end framework for global flood extent mapping using satellite observations.
-            Interface of the GFM:
+            GFM is  an end-to-end framework for global flood extent mapping using
+            satellite observations. The following GIF shows the user interface of the GFM:
           </p>
 
           <img src="https://github.com/PratyushTripathy/global_flood_mapper/blob/gfm-v2/media/GFM-v2-floodmapping.gif?raw=true"
@@ -209,30 +208,52 @@
 
 
           <p>
-            The published version of the Global Flood Mapper (GFM) focuses on automated processing of Sentinel-1 SAR data to
+            The published version of the GFM focuses on automated processing of Sentinel-1 SAR data to
             generate consistent flood extent maps across diverse geographic regions and flood events.
-            The corresponding peer-reviewed paper is available
+            You can read details in our peer-reviewed journal article
             <a href="https://link.springer.com/article/10.1007/s11069-022-05428-2">here</a>.
           </p>
 
 
           <p>
-            <strong>Global Flood Mapper v2</strong> extends the original framework beyond flood extent mapping to
-            support impact-oriented analysis.
+            <strong>Global Flood Mapper v2</strong> extends the original framework beyond flood extent
+            mapping to support impact-oriented analysis. In addition to delineating flooded areas, it
+            enables population exposure assessment using gridded population datasets, flood depth
+            estimation based on elevation-driven modeling, and the generation of event- and region-level
+            impact summaries. These capabilities are implemented within scalable, cloud-based workflows
+            designed for rapid and large-scale deployment.
           </p>
 
-          <ul>
-            <li>Population exposure assessment using gridded population datasets</li>
-            <li>Flood depth estimation using elevation-based modeling</li>
-            <li>Event- and region-level impact summaries</li>
-            <li>Scalable, cloud-based workflows for rapid deployment</li>
-          </ul>
+
+          <img src="https://raw.githubusercontent.com/PratyushTripathy/global_flood_mapper/refs/heads/gfm-v2/media/GFM-v2-impactassessment.gif?raw=true"
+               alt="Global Flood Mapper v2 flood impact assessment example"
+               style="width:100%; max-width:100%; margin:1.2rem 0; border-radius:6px;">
 
           <p>
             Code, documentation, and examples for Global Flood Mapper and Global Flood Mapper v2 are available on GitHub:<br>
             <a href="https://github.com/PratyushTripathy/global_flood_mapper">
               https://github.com/PratyushTripathy/global_flood_mapper
             </a>
+          </p>
+
+
+
+          <h3>My doctoral research</h3>
+
+          <p>
+            As part of my doctoral work, I am looking at global flood events and
+            investigating the uncertainties in existing global flood products. I am
+            particularly interested in this issue because I am investigating
+            the causal impact of floods on poverty and how that varies across space.
+            Therefore, high quality flood extent dataset is critical to ensuring that the
+            treatment and control groups in my causal model remain as neatly defined as possible.
+          </p>
+
+          <h3>Find my work relevant? Contact me!</h3>
+
+          <p>
+            If you work on flood mapping or related areas, please feel free to reach out. I am
+            always interested in collaborating with researchers who share overlapping research interests.
           </p>
 
         </section>
