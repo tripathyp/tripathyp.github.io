@@ -1,0 +1,43 @@
+---
+title: "My First Quarto Blog Post"
+date: "2026-01-31"
+permalink: /posts/2026/01/quarto-post/
+tags:
+  - quarto
+  - jekyll
+  - blog
+jupyter: defor39
+execute:
+  echo: true
+  output: true
+---
+
+This is my first blog post written in Quarto!
+
+## Quarto Features
+
+Quarto is a great tool for scientific and technical publishing.
+
+```{python}
+print("Hello, Quarto!")
+```
+
+```{python}
+#| label: fig-sine
+#| fig-cap: "Sine wave generated with Matplotlib"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2 * np.pi, 200)
+y = np.sin(x)
+
+plt.figure()
+plt.plot(x, y)
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+plt.title("Sine Wave")
+
+plt.savefig("fig-sine.png", dpi=150, bbox_inches="tight")
+plt.close()
+```
