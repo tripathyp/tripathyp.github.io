@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hands-On Geospatial AI for Environmental Applications",
+    "section": "",
+    "text": "Preface\nI have been thinking of writing a live document for a long time now. The main idea for this book is not just to share resources with the community but also for my personal benefit of documenting all the awesome tools and techniques I discover, only to eventually lose track of them.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "This is the introduction of the book.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-getting-started.html",
+    "href": "chapters/01-getting-started.html",
+    "title": "Chapter 1: Getting Started",
+    "section": "",
+    "text": "This chapter introduces the Python environment and packages for geospatial AI.\n\n# Install or import packages\nimport geopandas as gpd\nimport rasterio\nimport numpy as np\n\nprint(\"Environment ready\")\n\nEnvironment ready",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 1: Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-gis-basics.html",
+    "href": "chapters/02-gis-basics.html",
+    "title": "Chapter 2: GIS Basics",
+    "section": "",
+    "text": "I can write a few things here\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 2: GIS Basics</span>"
+    ]
+  }
+]
