@@ -1,9 +1,9 @@
-name: Update Book Docs from Main Repo
+name: Update Hands-On Geospatial AI Book
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # runs daily at midnight UTC
-  workflow_dispatch:      # can trigger manually too
+    - cron: "0 0 * * *"   # runs daily at midnight UTC
+  workflow_dispatch:       # can trigger manually
 
 jobs:
   update-book:
@@ -13,7 +13,7 @@ jobs:
       # Step 1: Checkout the personal website repo
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false  # prevent auth issues
+          persist-credentials: false
 
       # Step 2: Pull the docs folder from the main repo
       - name: Clone main repo docs
@@ -23,7 +23,12 @@ jobs:
           mv temp-repo/docs hands-on-geospatial-ai
           rm -rf temp-repo
 
-      # Step 3: Commit and push updated docs
+      # Step 3: Add .nojekyll to avoid Jekyll processing
+      - name: Add .nojekyll
+        run: |
+          touch hands-on-geospatial-ai/.nojekyll
+
+      # Step 4: Commit and push updated book
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
