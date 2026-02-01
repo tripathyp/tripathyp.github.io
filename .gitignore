@@ -1,2 +1,13 @@
 
 research.html
+
+# Jekyll / Ruby
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+*.gem
+*.swp
+*~
