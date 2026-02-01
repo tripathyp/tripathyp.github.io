@@ -1,0 +1,31 @@
+/* Style for collapsible year headers */
+.collapsible-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f1f1f1; /* Light gray background */
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out title and icon */
+}
+
+/* Style for the collapse icon */
+.collapse-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate icon when header is active (content is open) */
+.collapsible-header.active .collapse-icon {
+  transform: rotate(180deg); /* Rotate arrow up */
+}
+
+/* Default state: content is hidden by JavaScript */
+.collapsible-content {
+  display: none;
+  border: 1px solid #eee;
+  border-top: none; /* No double border with header */
+  padding: 10px;
+  background-color: #fff; /* White background for content */
+}

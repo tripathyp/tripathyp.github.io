@@ -1,48 +1,41 @@
-# Quarto Blog Post Guidelines
+# Quarto/Jupyter Blog Post Guidelines
 
-This document outlines the workflow for creating and deploying blog posts using Quarto for this website. This method generates standalone HTML files, which are then manually linked from the main `blogs.html` page.
+This document outlines the workflow for creating and deploying blog posts using Jupyter Notebooks and Quarto.
+
+This workflow uses a Jekyll Collection (`_blogs`) to generate a dynamic list of blog posts on the `/blogs` page. The actual content is rendered from Jupyter Notebooks (`.ipynb`) into standalone HTML files that live in the `blog_assets` directory. A custom navigation header is injected during the render process to allow users to navigate back to the main site.
 
 ## Workflow
 
-1.  **Create your Quarto Source File (.qmd):**
-    *   Place your Quarto source `.qmd` files in the `quarto_src/` directory.
-    *   Ensure your `.qmd` file is structured with the necessary YAML front matter and includes your Python code blocks for plots, tables, or other dynamic content. For example:
+1.  **Create Your Jupyter Notebook:**
+    *   Create your new Jupyter Notebook (`.ipynb`) file.
+    *   Place the notebook inside the `blog_assets/` directory, organized by year and month. For example: `blog_assets/2026/02/my-new-post.ipynb`.
+
+2.  **Render All Notebooks to HTML:**
+    *   Open your terminal in the root directory of this project.
+    *   Run the batch file:
+        ```bash
+        render_blogs.bat
+        ```
+    *   This script will automatically find and render every `.ipynb` file within the `blog_assets` directory. It will create the corresponding `.html` file (and `_files` folder, if needed) in the same location as the source notebook.
+
+3.  **Create a Pointer File in `_blogs`:**
+    *   Create a new Markdown file in the `_blogs` directory, named with the date and a slug (e.g., `_blogs/2026-02-15-my-new-post.md`).
+    *   This file only needs YAML front matter. This metadata will be used to create the "card" on the `/blogs` page.
+    *   The `link:` key is crucial: it must point to the path of the rendered HTML file from the previous step.
+
         ```yaml
         ---
-        title: "Your Post Title"
-        author: "Your Name"
-        date: "YYYY-MM-DD"
-        format:
-          html:
-            code-fold: true
-            theme: cosmo
-        jupyter: python3 # Or your preferred Python kernel (e.g., defor39, autofloods)
+        title: "My New Blog Post Title"
+        date: 2026-02-15
+        excerpt: "A short, one-sentence teaser for your blog post that will appear on the card."
+        link: /blog_assets/2026/02/my-new-post.html
         ---
         ```
 
-2.  **Render the Quarto Document to HTML:**
-    *   Open your terminal in the root directory of this project.
-    *   Run the following command to render your `.qmd` file to a standalone HTML output. Replace `your-post.qmd` with the actual filename of your Quarto source file.
-        ```bash
-        quarto render quarto_src/your-post.qmd --to html
-        ```
-    *   This command will generate `your-post.html` and a corresponding `your-post_files/` directory (if it contains assets like images) directly within the `quarto_src/` directory.
+4.  **Check Your Work:**
+    *   Restart your local Jekyll server to ensure it picks up the new file in the `_blogs` collection.
+    *   Navigate to your `/blogs` page. You should see a new card for your post. Clicking it should take you to your rendered HTML page, which will have the site's navigation bar at the top.
 
-3.  **Move the Generated Output to the `blogs/` Folder:**
-    *   Once rendering is complete, move the generated HTML file and its associated `_files` directory to the top-level `blogs/` directory. **It is crucial NOT to rename these files/folders.**
-    *   If you're updating an existing post, you may need to force the move to overwrite old files/folders.
-        ```bash
-        move -Force quarto_src/your-post.html blogs/your-post.html
-        move -Force quarto_src/your-post_files blogs/your-post_files
-        ```
-        (Note: If your `.qmd` did not generate a `_files` directory, you only need to move the HTML file.)
+## Updating the Navigation Bar
 
-4.  **Update `blogs.html` (Manually):**
-    *   Edit your static `blogs.html` file (the main blog listing page).
-    *   Manually add a link to your new blog post:
-        ```html
-        <a href="blogs/your-post.html">Your Post Title</a>
-        ```
-    *   Ensure to follow the existing formatting and style of your `blogs.html` page.
-
-Following these steps will ensure your Quarto-generated blog posts are correctly integrated into your website.
+The navigation bar in the rendered blog posts is a snapshot of the main site's navigation. If you ever update the main site's navigation (in `_data/navigation.yml`), you will need to manually update the `_includes/blog_nav_header.html` file to reflect these changes. This can be done by copying the rendered HTML of the new navbar into that file.
