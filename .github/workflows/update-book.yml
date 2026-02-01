@@ -1,0 +1,33 @@
+name: Update Book Docs from Main Repo
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # runs daily at midnight UTC
+  workflow_dispatch:      # can trigger manually too
+
+jobs:
+  update-book:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the personal website repo
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # prevent auth issues
+
+      # Step 2: Pull the docs folder from the main repo
+      - name: Clone main repo docs
+        run: |
+          rm -rf hands-on-geospatial-ai
+          git clone --depth 1 --branch main https://github.com/pratyushtripathy/hands-on-geospatial-ai.git temp-repo
+          mv temp-repo/docs hands-on-geospatial-ai
+          rm -rf temp-repo
+
+      # Step 3: Commit and push updated docs
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add hands-on-geospatial-ai
+          git commit -m "Update Hands-On Geospatial AI book from main repo" || echo "No changes"
+          git push origin main
