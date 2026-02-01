@@ -13,7 +13,9 @@ jobs:
       # Step 1: Checkout the personal website repo
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
 
       # Step 2: Pull the docs folder from the main repo
       - name: Clone main repo docs
