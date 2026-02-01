@@ -37,4 +37,5 @@ jobs:
           git config --local user.name "GitHub Action"
           git add hands-on-geospatial-ai
           git commit -m "Update Hands-On Geospatial AI book from main repo" || echo "No changes"
-          git push origin main
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/tripathyp/tripathyp.github.io.git main
+
