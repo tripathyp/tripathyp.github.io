@@ -12,7 +12,7 @@ main:
     url: /publications/
 
   - title: "Blogs"
-    url: /year-archive/
+    url: /blogs/
 
   - title: "Updates"
     url: /updates/
