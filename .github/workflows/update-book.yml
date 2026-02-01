@@ -13,9 +13,7 @@ jobs:
       # Step 1: Checkout the personal website repo
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
-
+          persist-credentials: false   # <--- important, disable default bot credentials
 
       # Step 2: Pull the docs folder from the main repo
       - name: Clone main repo docs
@@ -30,7 +28,7 @@ jobs:
         run: |
           touch hands-on-geospatial-ai/.nojekyll
 
-      # Step 4: Commit and push updated book
+      # Step 4: Commit and push updated book using PAT
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
@@ -38,4 +36,3 @@ jobs:
           git add hands-on-geospatial-ai
           git commit -m "Update Hands-On Geospatial AI book from main repo" || echo "No changes"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/tripathyp/tripathyp.github.io.git main
-
