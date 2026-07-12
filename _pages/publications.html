@@ -17,26 +17,31 @@ author_profile: true
 
         .table-striped th:nth-child(1),
         .table-striped td:nth-child(1) {
-            width: 25%;
+            width: 3%;
         }
 
         .table-striped th:nth-child(2),
         .table-striped td:nth-child(2) {
-            width: 5%;
+            width: 22%;
         }
 
         .table-striped th:nth-child(3),
         .table-striped td:nth-child(3) {
-            width: 40%;
+            width: 5%;
         }
 
         .table-striped th:nth-child(4),
         .table-striped td:nth-child(4) {
-            width: 20%;
+            width: 40%;
         }
 
         .table-striped th:nth-child(5),
         .table-striped td:nth-child(5) {
+            width: 20%;
+        }
+
+        .table-striped th:nth-child(6),
+        .table-striped td:nth-child(6) {
             width: 10%;
         }
 
@@ -63,6 +68,7 @@ author_profile: true
 <table id="journalArticlesTable" class="table table-striped">
     <thead>
         <tr>
+            <th>#</th>
             <th>Authors</th>
             <th>Year</th>
             <th>Title</th>
@@ -71,9 +77,12 @@ author_profile: true
         </tr>
     </thead>
     <tbody>
+        {% assign row_num = 0 %}
         {% for pub in publications %}
         {% if pub.category == "journal" %}
+        {% assign row_num = row_num | plus: 1 %}
         <tr>
+            <td>{{ row_num }}</td>
             <td>{{ pub.authors }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
@@ -103,6 +112,7 @@ author_profile: true
 <table id="preprintsTable" class="table table-striped">
     <thead>
         <tr>
+            <th>#</th>
             <th>Authors</th>
             <th>Year</th>
             <th>Title</th>
@@ -111,9 +121,12 @@ author_profile: true
         </tr>
     </thead>
     <tbody>
+        {% assign row_num = 0 %}
         {% for pub in publications %}
         {% if pub.category == "preprint" %}
+        {% assign row_num = row_num | plus: 1 %}
         <tr>
+            <td>{{ row_num }}</td>
             <td>{{ pub.authors }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
@@ -143,6 +156,7 @@ author_profile: true
 <table id="bookChaptersTable" class="table table-striped">
     <thead>
         <tr>
+            <th>#</th>
             <th>Authors</th>
             <th>Year</th>
             <th>Title</th>
@@ -151,9 +165,12 @@ author_profile: true
         </tr>
     </thead>
     <tbody>
+        {% assign row_num = 0 %}
         {% for pub in publications %}
         {% if pub.category == "book" %}
+        {% assign row_num = row_num | plus: 1 %}
         <tr>
+            <td>{{ row_num }}</td>
             <td>{{ pub.authors }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
