@@ -1,3 +1,13 @@
+- title: "Zero-shot inference strategies for smallholder (< 0.1 ha) agriculture field delineation with the Segment Anything foundation model"
+  authors: "Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R."
+  year: 2026
+  url: "https://doi.org/10.1016/j.srs.2026.100425"
+  category: "journal"
+  tags:
+    - "agriculture"
+    - "foundation models"
+    - "vision transformers"
+
 - title: "Geographically Weighted Logistic Regression to measure the role of Intra-Urban Drivers for urban growth modelling in Kathmandu, Central Himalayas"
   authors: "Diksha, Kumar, A. & Tripathy, P."
   year: 2023
@@ -80,16 +90,6 @@
   tags:
     - "urban growth modeling"
     - "urban analysis"
-
-- title: "Investigating the Segment Anything Foundation Model for Mapping Smallholder Agriculture Field Boundaries Without Training Labels"
-  authors: "Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R."
-  year: 2024
-  url: "https://arxiv.org/abs/2407.01846"
-  category: "preprint"
-  tags:
-    - "agriculture"
-    - "foundation models"
-    - "vision transformers"
 
 - title: "Global Built-up and Population Datasets: Which ones should you use for India?"
   authors: "Tripathy, P. & Balakrishnan, K."
