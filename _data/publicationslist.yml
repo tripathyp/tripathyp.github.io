@@ -4,9 +4,8 @@
   url: "https://doi.org/10.1016/j.srs.2026.100425"
   category: "journal"
   tags:
-    - "agriculture"
-    - "foundation models"
-    - "vision transformers"
+    - "Agriculture"
+    - "ML/AI"
 
 - title: "Geographically Weighted Logistic Regression to measure the role of Intra-Urban Drivers for urban growth modelling in Kathmandu, Central Himalayas"
   authors: "Diksha, Kumar, A. & Tripathy, P."
@@ -14,8 +13,7 @@
   url: "https://doi.org/10.1007/s10661-023-11164-2"
   category: "journal"
   tags:
-    - "urban growth modeling"
-    - "urban analysis"
+    - "Urban analysis"
 
 - title: "Evaluating the impact of water protection policy on urban growth: A case study of Jiaxing"
   authors: "Guan, C., Gómez, J. A., Tripathy, P., Duque, J. C., Passos, S., Cheng, T. & Keith, M."
@@ -23,8 +21,7 @@
   url: "https://doi.org/10.1177/23998083231163182"
   category: "journal"
   tags:
-    - "urban growth modeling"
-    - "urban analysis"
+    - "Urban analysis"
 
 - title: "Global Flood Mapper: A novel Google Earth Engine application for rapid flood mapping using Sentinel-1 SAR"
   authors: "Tripathy, P. & Malladi, T."
@@ -33,8 +30,6 @@
   category: "journal"
   tags:
     - "Floods"
-    - "Google Earth Engine"
-    - "Sentinel-1 SAR"
 
 - title: "Generating megacity-scale building height maps without DGNSS surveyed GCPs: An open-source approach"
   authors: "Tripathy, P., Balakrishnan, K., de Franchis, C., & Kumar, A."
@@ -42,8 +37,7 @@
   url: "https://doi.org/10.1177/23998083221084990"
   category: "journal"
   tags:
-    - "urban analysis"
-    - "building height"
+    - "Urban analysis"
 
 - title: "Analysing Urban Damage and Surface Deformation based hazard-risk in Kathmandu City during the 2015 Nepal Earthquake using SAR Interferometry"
   authors: "Kumar, A., Manisha, M., Lal, P., Prasad, A., Tripathy, P., & Saikia, P."
@@ -51,9 +45,7 @@
   url: "https://doi.org/10.1016/j.asr.2022.02.003"
   category: "journal"
   tags:
-    - "urban analysis"
-    - "SAR interferometry"
-    - "Sentinel-1 SAR"
+    - "Urban analysis"
 
 - title: "Drivers of air pollution variability during the second wave of COVID-19 in Delhi, India"
   authors: "Saharan, U. S., Kumar, R., Tripathy, P., Sateesh, M., Garg, J., Sharma, S. K., & Mandal, T. K."
@@ -61,8 +53,7 @@
   url: "https://doi.org/10.1016/j.uclim.2021.101059"
   category: "journal"
   tags:
-    - "urban analysis"
-    - "air pollution"
+    - "Urban analysis"
 
 - title: "Analyzing the Spatiotemporal Uncertainty in Urbanization Predictions"
   authors: "Gómez, J. A., Guan, C., Tripathy, P., Duque, J. C., Passos, S., Keith, M., & Liu, J."
@@ -70,8 +61,7 @@
   url: "https://doi.org/10.3390/rs13030512"
   category: "journal"
   tags:
-    - "urban growth modeling"
-    - "urban analysis"
+    - "Urban analysis"
 
 - title: "An open-source tool to extract natural continuity and hierarchy of urban street networks"
   authors: "Tripathy, P., Rao, P., Balakrishnan, K., & Malladi, T."
@@ -79,8 +69,7 @@
   url: "http://dx.doi.org/10.1177/2399808320967680"
   category: "journal"
   tags:
-    - "urban analysis"
-    - "street network"
+    - "Urban analysis"
 
 - title: "Monitoring and modelling spatio-temporal urban growth of Delhi using Cellular Automata and geoinformatics"
   authors: "Tripathy, P. & Kumar, A."
@@ -88,8 +77,8 @@
   url: "https://doi.org/10.1016/j.cities.2019.01.021"
   category: "journal"
   tags:
-    - "urban growth modeling"
-    - "urban analysis"
+    - "Urban analysis"
+    - "ML/AI"
 
 - title: "Global Built-up and Population Datasets: Which ones should you use for India?"
   authors: "Tripathy, P. & Balakrishnan, K."
@@ -97,7 +86,7 @@
   url: "https://arxiv.org/abs/2108.08304"
   category: "preprint"
   tags:
-    - "population downscaling"
+    - "Urban analysis"
 
 - title: "A CNN based method for sub-pixel urban land cover mapping using Landsat 5 TM and Resourcesat 1 - LISS IV imagery"
   authors: "Kumar, P. K., Balakrishnan, K. & Tripathy, P."
@@ -105,9 +94,8 @@
   url: "https://arxiv.org/abs/2112.08841"
   category: "preprint"
   tags:
-    - "urban land cover"
-    - "urban analysis"
-    - "neural networks"
+    - "Urban analysis"
+    - "ML/AI"
 
 - title: "Deep learning approach for monitoring urban land cover changes"
   authors: "Perikamana, K. K., Balakrishnan, K., & Tripathy, P."
@@ -115,6 +103,5 @@
   url: "https://doi.org/10.1016/B978-0-323-99164-3.00003-3"
   category: "book"
   tags:
-    - "urban land cover"
-    - "neural networks"
-    - "urban analysis"
+    - "Urban analysis"
+    - "ML/AI"
