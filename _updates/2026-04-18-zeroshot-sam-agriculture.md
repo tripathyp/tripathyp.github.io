@@ -1,5 +1,5 @@
 ---
-title: "New article on zero-shot inference strategies for smallholder agriculture field delineation"
+title: "New article on zero-shot inference strategies for foundation model"
 collection: updates
 type: "Journal Article"
 venue: "Science of Remote Sensing"
