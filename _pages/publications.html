@@ -196,15 +196,22 @@ author_profile: true
     </tbody>
 </table>
 
-<!-- Tablesort for click-to-sort -->
-<script src="https://unpkg.com/tablesort@5.2.1/dist/tablesort.min.js"></script>
+<!-- Tablesort for click-to-sort (self-hosted so a CDN outage can't break sorting) -->
+<script src="/assets/js/tablesort.min.js"></script>
 <script>
     (() => {
-    // 1) activate Tablesort
-    new Tablesort(document.getElementById('journalArticlesTable'));
-    new Tablesort(document.getElementById('preprintsTable'));
-    new Tablesort(document.getElementById('bookChaptersTable'));
+    // 1) activate Tablesort, isolated in try/catch so a failure here can't
+    // block the badge coloring below
+    try {
+        new Tablesort(document.getElementById('journalArticlesTable'));
+        new Tablesort(document.getElementById('preprintsTable'));
+        new Tablesort(document.getElementById('bookChaptersTable'));
+    } catch (e) {
+        console.error('Tablesort init failed:', e);
+    }
+    })();
 
+    (() => {
     // 2) palette & dynamic coloring
     const palette = [
     '#2a9d8f','#e76f51','#0288d1','#f4a261','#264653',
