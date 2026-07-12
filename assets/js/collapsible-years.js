@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+  var currentYear = String(new Date().getFullYear());
 
   collapsibleHeaders.forEach(function(header) {
     // Add click event listener to each header
@@ -20,13 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Initialize: hide content by default
+    // Initialize: expand the current year by default, collapse the rest
     // We expect the 'collapsible-content' div to be the immediate sibling
     var initialContent = header.nextElementSibling;
     if (initialContent && initialContent.classList.contains('collapsible-content')) {
-        initialContent.style.display = "none";
+        if (header.id === currentYear) {
+            header.classList.add('active');
+            initialContent.style.display = "block";
+        } else {
+            initialContent.style.display = "none";
+        }
     }
-    // Add 'active' class if you want them to be open by default or based on some state
-    // header.classList.add('active'); // uncomment this line to make them open by default
   });
 });
