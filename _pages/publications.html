@@ -200,8 +200,7 @@ author_profile: true
 <script src="/assets/js/tablesort.min.js"></script>
 <script>
     (() => {
-    // 1) activate Tablesort, isolated in try/catch so a failure here can't
-    // block the badge coloring below
+    /* activate Tablesort, isolated in try/catch so a failure here can't block the badge coloring below */
     try {
         new Tablesort(document.getElementById('journalArticlesTable'));
         new Tablesort(document.getElementById('preprintsTable'));
@@ -212,7 +211,7 @@ author_profile: true
     })();
 
     (() => {
-    // 2) palette & dynamic coloring
+    /* palette & dynamic coloring */
     const palette = [
     '#2a9d8f','#e76f51','#0288d1','#f4a261','#264653',
     '#e9c46a','#8a2be2','#d62828','#6c757d','#ff6b6b',
