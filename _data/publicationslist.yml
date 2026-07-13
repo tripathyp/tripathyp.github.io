@@ -7,6 +7,14 @@
     - "Agriculture"
     - "ML/AI"
 
+- title: "2024 Brazil Floods: Mapping the extent and impacts in Eastern Rio Grande do Sul using geospatial techniques"
+  authors: "Rathore, J., Kumari, S., Tripathy, P., Mahto, S. S., & Lal, P."
+  year: 2025
+  url: "https://doi.org/10.1016/j.nhres.2025.03.011"
+  category: "journal"
+  tags:
+    - "Floods"
+
 - title: "Geographically Weighted Logistic Regression to measure the role of Intra-Urban Drivers for urban growth modelling in Kathmandu, Central Himalayas"
   authors: "Diksha, Kumar, A. & Tripathy, P."
   year: 2023
@@ -22,6 +30,7 @@
   category: "journal"
   tags:
     - "Urban analysis"
+    - "ML/AI"
 
 - title: "Global Flood Mapper: A novel Google Earth Engine application for rapid flood mapping using Sentinel-1 SAR"
   authors: "Tripathy, P. & Malladi, T."
@@ -62,6 +71,7 @@
   category: "journal"
   tags:
     - "Urban analysis"
+    - "ML/AI"
 
 - title: "An open-source tool to extract natural continuity and hierarchy of urban street networks"
   authors: "Tripathy, P., Rao, P., Balakrishnan, K., & Malladi, T."
@@ -78,7 +88,6 @@
   category: "journal"
   tags:
     - "Urban analysis"
-    - "ML/AI"
 
 - title: "Global Built-up and Population Datasets: Which ones should you use for India?"
   authors: "Tripathy, P. & Balakrishnan, K."
