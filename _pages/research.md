@@ -4,8 +4,9 @@ permalink: /research/
 author_profile: true
 ---
 
-I am broadly interested in using geospatial data and machine learning for a wide range of applications.
-Some of the key topics I have worked on or continue to explore include:
+I am broadly interested in using geospatial data, machine learning, and econometric methods to study a
+wide range of environmental and human challenges. Some of the key topics I have worked on or continue to
+explore include:
 
 ## Floods
 I have built a tool called Global Flood Mapper that maps flood extent using Sentinel-1 SAR imagery as soon
