@@ -68,9 +68,9 @@ author_profile: true
 <table id="journalArticlesTable" class="table table-striped">
     <thead>
         <tr>
-            <th>#</th>
+            <th data-sort-method="number">#</th>
             <th>Authors</th>
-            <th>Year</th>
+            <th data-sort-method="number">Year</th>
             <th>Title</th>
             <th>Tags</th>
             <th>Link</th>
@@ -112,9 +112,9 @@ author_profile: true
 <table id="preprintsTable" class="table table-striped">
     <thead>
         <tr>
-            <th>#</th>
+            <th data-sort-method="number">#</th>
             <th>Authors</th>
-            <th>Year</th>
+            <th data-sort-method="number">Year</th>
             <th>Title</th>
             <th>Tags</th>
             <th>Link</th>
@@ -156,9 +156,9 @@ author_profile: true
 <table id="bookChaptersTable" class="table table-striped">
     <thead>
         <tr>
-            <th>#</th>
+            <th data-sort-method="number">#</th>
             <th>Authors</th>
-            <th>Year</th>
+            <th data-sort-method="number">Year</th>
             <th>Title</th>
             <th>Tags</th>
             <th>Link</th>
@@ -198,6 +198,7 @@ author_profile: true
 
 <!-- Tablesort for click-to-sort (self-hosted so a CDN outage can't break sorting) -->
 <script src="/assets/js/tablesort.min.js"></script>
+<script src="/assets/js/tablesort-sorts/tablesort.number.min.js"></script>
 <script>
     (() => {
     /* activate Tablesort, isolated in try/catch so a failure here can't block the badge coloring below */
