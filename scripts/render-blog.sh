@@ -42,6 +42,7 @@ python3 "$REPO_ROOT/scripts/generate_blog_entry.py" "$NOTEBOOK"
 
 RENDERED_HTML="$OUTPUT_DIR/$(basename "$NOTEBOOK" .ipynb).html"
 python3 "$REPO_ROOT/scripts/inject_subscribe_widget.py" "$RENDERED_HTML"
+python3 "$REPO_ROOT/scripts/inject_analytics.py" "$RENDERED_HTML"
 
 # Quarto drops a stray .gitignore next to the notebook on every render; the
 # top-level blog_notebooks/.gitignore already covers what it's for.
