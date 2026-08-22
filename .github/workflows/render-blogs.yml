@@ -1,0 +1,39 @@
+name: Render Blog Notebooks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blog_notebooks/**/*.ipynb"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render notebooks to blog_assets
+        run: |
+          set -e
+          find blog_notebooks -type f -name '*.ipynb' ! -name '_template.ipynb' -print0 |
+            while IFS= read -r -d '' nb; do
+              echo "Rendering $nb"
+              bash scripts/render-blog.sh "$nb"
+            done
+
+      - name: Commit rendered output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog_assets
+          git diff --cached --quiet || git commit -m "Auto-render blog notebooks [skip ci]"
+          git push
