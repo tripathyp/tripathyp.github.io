@@ -29,5 +29,9 @@ python3 "$REPO_ROOT/scripts/fix_colab_badge.py" "$NOTEBOOK"
 quarto render "$NOTEBOOK" --output-dir "$OUTPUT_DIR"
 python3 "$REPO_ROOT/scripts/generate_blog_entry.py" "$NOTEBOOK"
 
+# Quarto drops a stray .gitignore next to the notebook on every render; the
+# top-level blog_notebooks/.gitignore already covers what it's for.
+rm -f "$REPO_ROOT/$(dirname "$NOTEBOOK")/.gitignore"
+
 echo ""
 echo "Rendered to: blog_assets/$RELATIVE_DIR/"
