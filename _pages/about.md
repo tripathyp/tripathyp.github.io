@@ -18,9 +18,13 @@ doesn't otherwise exist, enabling rigorous causal identification in these settin
 
 To learn more, please check my [Research](/research/) and [Publications](/publications/).
 
+<div class="recent-work" markdown="1">
+
 ### Recent Work
 * Agrawal, A. & Tripathy, P. (2026). Global Flood Mapper v2: Open-Access Flood Mapping and Exposure 
 Assessment with Sentinel-1 SAR. [https://doi.org/10.31223/X54482](https://doi.org/10.31223/X54482)
 * Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2026). Zero-shot inference strategies for 
 smallholder (< 0.1 ha) agriculture field delineation with the Segment Anything foundation model. 
 Science of Remote Sensing, 100425. [https://doi.org/10.1016/j.srs.2026.100425](https://doi.org/10.1016/j.srs.2026.100425)
+
+</div>
