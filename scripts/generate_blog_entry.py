@@ -71,7 +71,7 @@ def main():
 
     # notebook_path looks like blog_notebooks/<year>/<month>/<slug>.ipynb
     relative_dir = notebook_path.parent.relative_to("blog_notebooks")
-    link = f"/blog_assets/{relative_dir}/{stem}.html"
+    link = f"/blogs/{relative_dir}/{stem}.html"
 
     teaser = first_teaser_text(nb["cells"])
 

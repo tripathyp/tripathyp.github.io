@@ -21,10 +21,10 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Wipe blog_assets for a clean rebuild
-        run: rm -rf blog_assets/*
+      - name: Wipe blogs/ for a clean rebuild
+        run: rm -rf blogs/*
 
-      - name: Render notebooks to blog_assets
+      - name: Render notebooks to blogs/
         run: |
           set -e
           find blog_notebooks -type f -name '*.ipynb' ! -name '_template.ipynb' \
@@ -41,6 +41,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog_assets blog_notebooks _blogs
+          git add blogs blog_notebooks _blogs
           git diff --cached --quiet || git commit -m "Auto-render blog notebooks [skip ci]"
           git push
