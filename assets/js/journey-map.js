@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return L.marker([point.lat, point.lng], { icon: icon, title: point.place }).addTo(map);
   }
 
-  function fadeMarker(marker) {
+  function setMarkerActive(marker, active) {
     var el = marker.getElement();
     if (el) {
-      el.classList.remove("journey-marker-active");
+      el.classList.toggle("journey-marker-active", active);
     }
   }
 
@@ -101,9 +101,34 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(frame);
   }
 
-  var currentIndex = 0;
-  var markers = [makeMarker(points[0], true)];
+  var activeIndex = 0;
+  var markers = new Array(points.length);
+  markers[0] = makeMarker(points[0], true);
 
+  var pendingIndex = null;
+  var debounceTimer = null;
+
+  function goTo(index) {
+    if (index === activeIndex) return;
+
+    var from = points[activeIndex];
+    var to = points[index];
+
+    setMarkerActive(markers[activeIndex], false);
+    if (!markers[index]) {
+      markers[index] = makeMarker(to, true);
+    } else {
+      setMarkerActive(markers[index], true);
+    }
+
+    map.flyTo([to.lat, to.lng], 5, { duration: 1.3 });
+    animateFlight(from, to);
+    activeIndex = index;
+  }
+
+  // Scrolling can cross several points at once (fast scroll, or a restored
+  // scroll position on load) - debounce so only the final settled point
+  // triggers a single transition, instead of each one stomping the last.
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -111,17 +136,17 @@ document.addEventListener("DOMContentLoaded", function () {
         var index = points.findIndex(function (p) {
           return p.el === entry.target;
         });
-        if (index <= currentIndex) return;
-
-        var from = points[currentIndex];
-        var to = points[index];
-
-        fadeMarker(markers[markers.length - 1]);
-        map.flyTo([to.lat, to.lng], 5, { duration: 1.3 });
-        animateFlight(from, to);
-        markers.push(makeMarker(to, true));
-        currentIndex = index;
+        if (index === -1) return;
+        pendingIndex = index;
       });
+
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(function () {
+        if (pendingIndex !== null) {
+          goTo(pendingIndex);
+          pendingIndex = null;
+        }
+      }, 150);
     },
     { threshold: 0, rootMargin: "-40% 0px -40% 0px" }
   );
