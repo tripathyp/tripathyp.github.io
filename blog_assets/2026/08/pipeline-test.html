@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-08-07">
 
 <title>Testing the notebook blogging pipeline</title>
 <style>
@@ -95,6 +96,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 07, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -104,7 +111,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<style>
+.quarto-title-meta-heading { display: none; }
+.quarto-title-meta-contents .date { font-size: 0.85em; color: #888; margin-top: -0.5em; }
+.colab-badge-row { text-align: right; margin-bottom: 1em; }
+</style>
+<div class="colab-badge-row">
 <p><a href="https://colab.research.google.com/github/tripathyp/tripathyp.github.io/blob/main/blog_notebooks/2026/08/pipeline-test.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+</div>
 <p>This is a small test post to confirm the notebook -&gt; Quarto -&gt; Jekyll blogging pipeline works end to end, including code cells, their output, and the Colab button above.</p>
 <div id="code-example" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="bu">sum</span>(i <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>))</span>
