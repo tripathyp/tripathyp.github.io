@@ -54,7 +54,7 @@ WIDGET_HTML = f"""
       transition: border-color 0.15s ease;
     }}
     #{MARKER} input[type="email"]:focus {{
-      border-color: #2f7f93;
+      border-color: #0288d1;
     }}
     #{MARKER} button {{
       width: 100%;
@@ -63,20 +63,20 @@ WIDGET_HTML = f"""
       font-family: inherit;
       font-weight: 600;
       color: #fff;
-      background-color: #2f7f93;
+      background-color: #0288d1;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.15s ease;
     }}
     #{MARKER} button:hover {{
-      background-color: #266575;
+      background-color: #026da3;
     }}
     #{MARKER} .subscribe-honeypot {{ display: none !important; }}
     #{MARKER} .subscribe-thanks {{
       display: none;
       margin: 0;
-      color: #2f7f93;
+      color: #0288d1;
       font-weight: 600;
     }}
     @media screen and (max-width: 900px) {{
