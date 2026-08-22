@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Auto-fill the Colab badge link in a blog notebook's badge cell.
+"""Keep the Colab badge link in a blog notebook's badge cell pointing at its
+own current path.
 
-Replaces the template's placeholder path with the notebook's actual path in the
-repo, so nobody has to hand-edit the badge cell for each new post. No-op if the
-placeholder isn't present (i.e. the badge is already filled in).
+Always rewrites the blob/main/<path>.ipynb portion of the badge href to match
+the notebook's actual current location - handles both the template's
+placeholder on first use, and a stale link left behind if the notebook is
+later renamed or moved. No-op if the link already matches.
 """
 import json
+import re
 import sys
 
-PLACEHOLDER = "REPLACE/WITH/PATH.ipynb"
+LINK_RE = re.compile(r"(blob/main/)\S+?\.ipynb")
 
 
 def main():
@@ -26,7 +29,7 @@ def main():
         if cell.get("id") != "colab-badge":
             continue
         source = cell["source"]
-        new_source = [line.replace(PLACEHOLDER, notebook_path) for line in source]
+        new_source = [LINK_RE.sub(r"\g<1>" + notebook_path, line) for line in source]
         if new_source != source:
             cell["source"] = new_source
             changed = True
@@ -35,7 +38,7 @@ def main():
         with open(notebook_path, "w") as f:
             json.dump(nb, f, indent=1)
             f.write("\n")
-        print(f"Filled in Colab badge link -> {notebook_path}")
+        print(f"Updated Colab badge link -> {notebook_path}")
 
 
 if __name__ == "__main__":

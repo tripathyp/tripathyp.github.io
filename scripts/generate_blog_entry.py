@@ -84,6 +84,7 @@ def main():
         f"date: {date}\n"
         'location: "Website"\n'
         f"link: {link}\n"
+        f"notebook: {notebook_path.as_posix()}\n"
         "---\n"
         "\n"
         f"{teaser}\n"

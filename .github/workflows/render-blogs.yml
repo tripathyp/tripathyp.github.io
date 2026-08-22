@@ -21,14 +21,21 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Wipe blog_assets for a clean rebuild
+        run: rm -rf blog_assets/*
+
       - name: Render notebooks to blog_assets
         run: |
           set -e
-          find blog_notebooks -type f -name '*.ipynb' ! -name '_template.ipynb' -print0 |
+          find blog_notebooks -type f -name '*.ipynb' ! -name '_template.ipynb' \
+              -not -path '*/.ipynb_checkpoints/*' -print0 |
             while IFS= read -r -d '' nb; do
               echo "Rendering $nb"
               bash scripts/render-blog.sh "$nb"
             done
+
+      - name: Prune _blogs entries whose source notebook is gone
+        run: python3 scripts/prune_orphaned_blogs.py
 
       - name: Commit rendered output
         run: |
