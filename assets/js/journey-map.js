@@ -102,16 +102,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var activeIndex = 0;
+  var maxVisitedIndex = 0;
   var markers = new Array(points.length);
   markers[0] = makeMarker(points[0], true);
 
   var pendingIndex = null;
   var debounceTimer = null;
 
+  // Camera movement (pan/zoom) always happens, both directions - scrolling
+  // back up re-visits an earlier location. The arc itself is only ever
+  // drawn once per segment, the first time genuinely new forward ground is
+  // covered, anchored to the furthest point reached so far rather than
+  // wherever the camera currently happens to be - so re-tracing already
+  // -covered ground (in either direction) never redraws a route.
   function goTo(index) {
     if (index === activeIndex) return;
-
-    var from = points[activeIndex];
     var to = points[index];
 
     setMarkerActive(markers[activeIndex], false);
@@ -122,7 +127,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     map.flyTo([to.lat, to.lng], 5, { duration: 1.3 });
-    animateFlight(from, to);
+
+    if (index > maxVisitedIndex) {
+      animateFlight(points[maxVisitedIndex], to);
+      maxVisitedIndex = index;
+    }
+
     activeIndex = index;
   }
 
