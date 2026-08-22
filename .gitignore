@@ -1,6 +1,4 @@
 
-research.html
-
 # Jekyll / Ruby
 _site/
 .sass-cache/
@@ -11,3 +9,6 @@ vendor/
 *.gem
 *.swp
 *~
+
+# macOS
+.DS_Store
