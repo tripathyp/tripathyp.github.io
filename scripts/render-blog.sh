@@ -25,6 +25,7 @@ RELATIVE_DIR="$(dirname "${NOTEBOOK#blog_notebooks/}")"
 OUTPUT_DIR="$REPO_ROOT/blog_assets/$RELATIVE_DIR"
 
 mkdir -p "$OUTPUT_DIR"
+python3 "$REPO_ROOT/scripts/fix_colab_badge.py" "$NOTEBOOK"
 quarto render "$NOTEBOOK" --output-dir "$OUTPUT_DIR"
 
 echo ""
