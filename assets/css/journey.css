@@ -1,0 +1,162 @@
+.journey-intro {
+  max-width: 640px;
+  margin: 0 0 2.5em 0;
+}
+
+.journey-route {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 2.5em;
+}
+
+.journey-route::before {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  bottom: 0.4em;
+  left: 0.95em;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #0288d1 0,
+    #0288d1 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+.journey-stop {
+  position: relative;
+  margin-bottom: 2.2em;
+}
+
+.journey-stop::before {
+  content: "";
+  position: absolute;
+  left: -2.5em;
+  top: 0.3em;
+  width: 1.9em;
+  height: 1.9em;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #0288d1;
+}
+
+.journey-stop .journey-icon {
+  position: absolute;
+  left: -2.15em;
+  top: 0.72em;
+  font-size: 0.85em;
+  color: #0288d1;
+}
+
+.journey-place {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #303336;
+  margin: 0 0 0.1em 0;
+}
+
+.journey-coords {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.72em;
+  letter-spacing: 0.02em;
+  color: #9199a0;
+  margin: 0 0 0.5em 0;
+}
+
+.journey-role {
+  font-weight: 600;
+  color: #494e52;
+  margin: 0;
+}
+
+.journey-org {
+  font-style: italic;
+  color: #494e52;
+  margin: 0 0 0.3em 0;
+}
+
+.journey-dates {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.78em;
+  color: #0288d1;
+  margin: 0 0 0.5em 0;
+}
+
+.journey-desc {
+  font-size: 0.92em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Detour stops (internships that branch off the main path) */
+.journey-stop.journey-detour {
+  margin-left: 1.8em;
+  margin-bottom: 1.4em;
+}
+
+.journey-stop.journey-detour::before {
+  left: -2.5em;
+  width: 1.4em;
+  height: 1.4em;
+  top: 0.45em;
+  border-color: #e0793f;
+}
+
+.journey-stop.journey-detour .journey-icon {
+  left: -2.22em;
+  top: 0.72em;
+  font-size: 0.68em;
+  color: #e0793f;
+}
+
+.journey-stop.journey-detour .journey-place {
+  font-size: 1.05em;
+}
+
+.journey-stop.journey-detour .journey-dates {
+  color: #e0793f;
+}
+
+.journey-stop.journey-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.journey-stop.journey-reveal.journey-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-stop.journey-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .journey-route {
+    padding-left: 2em;
+  }
+  .journey-stop::before {
+    left: -2em;
+  }
+  .journey-stop .journey-icon {
+    left: -1.7em;
+  }
+  .journey-stop.journey-detour {
+    margin-left: 1em;
+  }
+  .journey-stop.journey-detour::before {
+    left: -2em;
+  }
+  .journey-stop.journey-detour .journey-icon {
+    left: -1.78em;
+  }
+}
