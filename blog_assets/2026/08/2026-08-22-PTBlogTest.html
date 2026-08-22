@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="2026-08-22-PTBlogTest_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="2026-08-22-PTBlogTest_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="2026-08-22-PTBlogTest_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="2026-08-22-PTBlogTest_files/libs/bootstrap/bootstrap-a0073a120dedc1faba7afaa4070e21d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="2026-08-22-PTBlogTest_files/libs/bootstrap/bootstrap-b8e90d8ee1cb09d7e48f74709c6ff147.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -565,4 +565,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+
+<div id="subscribe-widget">
+  <style>
+    #subscribe-widget {
+      position: fixed;
+      top: 120px;
+      right: 20px;
+      width: 240px;
+      padding: 1em;
+      background-color: #f7f7f7;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.85em;
+      line-height: 1.4;
+      z-index: 100;
+    }
+    #subscribe-widget p { margin: 0 0 0.6em 0; }
+    #subscribe-widget input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.4em;
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
+    }
+    #subscribe-widget button {
+      width: 100%;
+      padding: 0.4em;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    #subscribe-widget .subscribe-honeypot { display: none !important; }
+    #subscribe-widget .subscribe-thanks { display: none; margin: 0; }
+    @media screen and (max-width: 900px) {
+      #subscribe-widget {
+        position: static;
+        width: auto;
+        margin: 2em 0;
+      }
+    }
+  </style>
+  <p>Want to be notified when similar blog posts come out? Leave your email below.</p>
+  <form id="subscribe-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfWv1VgDAg5JNeeQNQjMbC7M9n2U7b29XyRDF954ZVMRbp0ZA/formResponse" method="POST" target="subscribe-hidden-iframe">
+    <input type="email" name="entry.1898607375" placeholder="you@example.com" required>
+    <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off">
+    <button type="submit">Notify me</button>
+  </form>
+  <p class="subscribe-thanks">Thanks - you're on the list!</p>
+  <iframe name="subscribe-hidden-iframe" style="display:none"></iframe>
+  <script>
+  (function() {
+    var form = document.getElementById("subscribe-form");
+    var thanks = document.querySelector("#subscribe-widget .subscribe-thanks");
+    form.addEventListener("submit", function(e) {
+      var honeypot = form.querySelector(".subscribe-honeypot");
+      if (honeypot.value) {
+        e.preventDefault();
+        return;
+      }
+      setTimeout(function() {
+        form.style.display = "none";
+        thanks.style.display = "block";
+      }, 300);
+    });
+  })();
+  </script>
+</div>
 </body></html>
