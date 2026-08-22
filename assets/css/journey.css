@@ -1,13 +1,49 @@
-.journey-intro {
-  max-width: 640px;
-  margin: 0 0 2.5em 0;
+.journey-page {
+  max-width: 620px;
 }
+
+.journey-intro {
+  margin: 0 0 2.2em 0;
+  color: #494e52;
+}
+
+/* ---- Floating map (wide screens only) ---- */
+
+.journey-map-panel {
+  display: none;
+}
+
+@media screen and (min-width: 1500px) {
+  .journey-map-panel {
+    display: block;
+    position: fixed;
+    top: 130px;
+    right: 32px;
+    width: 320px;
+    z-index: 90;
+  }
+
+  #journey-map {
+    width: 100%;
+    height: 360px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f0f1f1;
+  }
+
+  .journey-map-caption {
+    font-size: 0.75em;
+    color: #9199a0;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+  }
+}
+
+/* ---- Main route ---- */
 
 .journey-route {
   position: relative;
-  max-width: 640px;
-  margin: 0 auto;
-  padding-left: 2.5em;
+  padding-left: 2.3em;
 }
 
 .journey-route::before {
@@ -15,7 +51,7 @@
   position: absolute;
   top: 0.4em;
   bottom: 0.4em;
-  left: 0.95em;
+  left: 0.85em;
   width: 2px;
   background: repeating-linear-gradient(
     to bottom,
@@ -28,40 +64,45 @@
 
 .journey-stop {
   position: relative;
-  margin-bottom: 2.2em;
+  margin-bottom: 3em;
+}
+
+.journey-stop:last-child {
+  margin-bottom: 0;
 }
 
 .journey-stop::before {
   content: "";
   position: absolute;
-  left: -2.5em;
-  top: 0.3em;
-  width: 1.9em;
-  height: 1.9em;
+  left: -2.3em;
+  top: 0.15em;
+  width: 1.7em;
+  height: 1.7em;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #0288d1;
 }
 
-.journey-stop .journey-icon {
+.journey-stop > .journey-icon {
   position: absolute;
-  left: -2.15em;
-  top: 0.72em;
-  font-size: 0.85em;
+  left: -1.98em;
+  top: 0.53em;
+  font-size: 0.78em;
   color: #0288d1;
 }
 
 .journey-place {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-weight: 600;
-  font-size: 1.3em;
+  font-size: 1.25em;
   color: #303336;
   margin: 0 0 0.1em 0;
+  line-height: 1.25;
 }
 
 .journey-coords {
   font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-  font-size: 0.72em;
+  font-size: 0.7em;
   letter-spacing: 0.02em;
   color: #9199a0;
   margin: 0 0 0.5em 0;
@@ -71,55 +112,89 @@
   font-weight: 600;
   color: #494e52;
   margin: 0;
-}
-
-.journey-org {
-  font-style: italic;
-  color: #494e52;
-  margin: 0 0 0.3em 0;
+  font-size: 0.95em;
 }
 
 .journey-dates {
   font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-  font-size: 0.78em;
+  font-size: 0.75em;
   color: #0288d1;
-  margin: 0 0 0.5em 0;
+  margin: 0.15em 0 0.6em 0;
 }
 
 .journey-desc {
-  font-size: 0.92em;
-  line-height: 1.5;
+  font-size: 0.88em;
+  line-height: 1.55;
+  color: #494e52;
   margin: 0;
 }
 
-/* Detour stops (internships that branch off the main path) */
-.journey-stop.journey-detour {
-  margin-left: 1.8em;
-  margin-bottom: 1.4em;
+/* ---- Nested sub-lists (internships / role progression) ---- */
+
+.journey-sublist {
+  margin-top: 1em;
+  padding: 0.8em 1em;
+  background-color: #f7f8f8;
+  border-radius: 6px;
+  border-left: 3px solid #e0793f;
 }
 
-.journey-stop.journey-detour::before {
-  left: -2.5em;
-  width: 1.4em;
-  height: 1.4em;
-  top: 0.45em;
-  border-color: #e0793f;
+.journey-sublist-label {
+  font-size: 0.72em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9199a0;
+  margin: 0 0 0.5em 0;
 }
 
-.journey-stop.journey-detour .journey-icon {
-  left: -2.22em;
-  top: 0.72em;
-  font-size: 0.68em;
+.journey-subitem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #494e52;
+  margin-bottom: 0.5em;
+}
+
+.journey-subitem:last-child {
+  margin-bottom: 0;
+}
+
+.journey-subicon {
   color: #e0793f;
+  font-size: 0.8em;
+  flex-shrink: 0;
 }
 
-.journey-stop.journey-detour .journey-place {
-  font-size: 1.05em;
+.journey-subtext {
+  display: block;
 }
 
-.journey-stop.journey-detour .journey-dates {
-  color: #e0793f;
+.journey-subdates {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  color: #9199a0;
+  margin-left: 0.4em;
+  white-space: nowrap;
 }
+
+.journey-roleitem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 0.85em;
+  color: #494e52;
+  padding: 0.25em 0;
+  border-bottom: 1px solid #ebecec;
+}
+
+.journey-roleitem:last-child {
+  border-bottom: none;
+}
+
+/* ---- Scroll reveal ---- */
 
 .journey-stop.journey-reveal {
   opacity: 0;
@@ -142,21 +217,30 @@
 
 @media screen and (max-width: 600px) {
   .journey-route {
-    padding-left: 2em;
+    padding-left: 1.8em;
   }
   .journey-stop::before {
-    left: -2em;
+    left: -1.8em;
   }
-  .journey-stop .journey-icon {
-    left: -1.7em;
+  .journey-stop > .journey-icon {
+    left: -1.55em;
   }
-  .journey-stop.journey-detour {
-    margin-left: 1em;
+  .journey-subitem {
+    flex-wrap: wrap;
   }
-  .journey-stop.journey-detour::before {
-    left: -2em;
-  }
-  .journey-stop.journey-detour .journey-icon {
-    left: -1.78em;
-  }
+}
+
+/* Leaflet marker styling (custom divIcon, no default image assets needed) */
+.journey-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0288d1;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #0288d1;
+}
+
+.journey-marker.journey-marker-active {
+  background: #e0793f;
+  box-shadow: 0 0 0 4px rgba(224, 121, 63, 0.35);
 }
