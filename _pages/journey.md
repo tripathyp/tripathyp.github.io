@@ -1,7 +1,7 @@
 ---
 title: "Journey"
 permalink: /journey/
-author_profile: false
+author_profile: true
 ---
 
 <div class="journey-page">
@@ -9,6 +9,7 @@ author_profile: false
 <p class="journey-intro">From Patna to Ranchi to Bengaluru to Santa Barbara, with a few
 detours along the way — the path that led here, mapped out stop by stop.</p>
 
+<div class="journey-layout">
 <div class="journey-map-panel">
   <div id="journey-map"></div>
   <p class="journey-map-caption">Following the route as you scroll</p>
@@ -105,5 +106,6 @@ and economic development, combining satellite imagery, AI, and econometrics.</p>
 </div>
 </div>
 
+</div>
 </div>
 </div>

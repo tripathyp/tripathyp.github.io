@@ -1,11 +1,15 @@
 // Floating map that follows the Journey page's timeline as you scroll,
 // flying between real coordinates and drawing an animated flight arc for
-// each transition. Only runs on wide screens (matches the CSS breakpoint
-// that shows .journey-map-panel) since a live map needs real room to work.
+// each transition. Only runs when .journey-map-panel is actually visible
+// (CSS hides it below a width threshold) - checked via computed style
+// rather than duplicating that breakpoint number here.
 document.addEventListener("DOMContentLoaded", function () {
   var panel = document.querySelector(".journey-map-panel");
   var mapEl = document.getElementById("journey-map");
-  if (!panel || !mapEl || window.innerWidth < 1500 || typeof L === "undefined") {
+  if (!panel || !mapEl || typeof L === "undefined") {
+    return;
+  }
+  if (window.getComputedStyle(panel).display === "none") {
     return;
   }
 

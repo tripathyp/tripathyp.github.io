@@ -1,31 +1,34 @@
-.journey-page {
-  max-width: 620px;
-}
-
 .journey-intro {
+  max-width: 620px;
   margin: 0 0 2.2em 0;
   color: #494e52;
 }
 
-/* ---- Floating map (wide screens only) ---- */
+/* ---- Layout: map sits alongside the route when there's room, otherwise
+   it's simply not shown (rather than guessing at raw browser width) ---- */
+
+.journey-layout {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
 
 .journey-map-panel {
   display: none;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1000px) {
   .journey-map-panel {
     display: block;
-    position: fixed;
-    top: 130px;
-    right: 32px;
-    width: 320px;
-    z-index: 90;
+    position: sticky;
+    top: 100px;
+    flex: 0 0 260px;
+    width: 260px;
   }
 
   #journey-map {
     width: 100%;
-    height: 360px;
+    height: 320px;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     border: 1px solid #f0f1f1;
@@ -42,6 +45,9 @@
 /* ---- Main route ---- */
 
 .journey-route {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 560px;
   position: relative;
   padding-left: 2.3em;
 }
