@@ -20,32 +20,65 @@ WIDGET_HTML = f"""
     #{MARKER} {{
       position: fixed;
       top: 120px;
-      right: 20px;
-      width: 240px;
-      padding: 1em;
-      background-color: #f7f7f7;
-      border: 1px solid #ddd;
+      right: 24px;
+      width: 250px;
+      padding: 1.25em;
+      background-color: #fff;
+      border: 1px solid #f0f1f1;
       border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
+        "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
       font-size: 0.85em;
-      line-height: 1.4;
+      line-height: 1.5;
+      color: #494e52;
       z-index: 100;
     }}
-    #{MARKER} p {{ margin: 0 0 0.6em 0; }}
+    #{MARKER} p {{ margin: 0 0 0.8em 0; }}
+    #{MARKER} .subscribe-label {{
+      font-weight: 600;
+      color: #303336;
+      margin-bottom: 0.4em;
+    }}
     #{MARKER} input[type="email"] {{
       width: 100%;
       box-sizing: border-box;
-      padding: 0.4em;
-      margin-bottom: 0.5em;
-      font-size: 0.9em;
+      padding: 0.55em 0.7em;
+      margin-bottom: 0.6em;
+      font-size: 0.95em;
+      font-family: inherit;
+      color: #494e52;
+      border: 1px solid #d8dadb;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }}
+    #{MARKER} input[type="email"]:focus {{
+      border-color: #2f7f93;
     }}
     #{MARKER} button {{
       width: 100%;
-      padding: 0.4em;
+      padding: 0.55em;
+      font-size: 0.95em;
+      font-family: inherit;
+      font-weight: 600;
+      color: #fff;
+      background-color: #2f7f93;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 0.9em;
+      transition: background-color 0.15s ease;
+    }}
+    #{MARKER} button:hover {{
+      background-color: #266575;
     }}
     #{MARKER} .subscribe-honeypot {{ display: none !important; }}
-    #{MARKER} .subscribe-thanks {{ display: none; margin: 0; }}
+    #{MARKER} .subscribe-thanks {{
+      display: none;
+      margin: 0;
+      color: #2f7f93;
+      font-weight: 600;
+    }}
     @media screen and (max-width: 900px) {{
       #{MARKER} {{
         position: static;
@@ -54,7 +87,8 @@ WIDGET_HTML = f"""
       }}
     }}
   </style>
-  <p>Want to be notified when similar blog posts come out? Leave your email below.</p>
+  <p class="subscribe-label">Get notified of new posts</p>
+  <p>Leave your email to hear about similar blog posts in the future.</p>
   <form id="subscribe-form" action="{FORM_ACTION}" method="POST" target="subscribe-hidden-iframe">
     <input type="email" name="{EMAIL_ENTRY}" placeholder="you@example.com" required>
     <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off">
