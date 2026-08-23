@@ -109,7 +109,6 @@
 }
 
 .journey-place {
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-weight: 600;
   font-size: 1.25em;
   color: #303336;
@@ -125,7 +124,6 @@
 }
 
 .journey-dates {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   font-size: 0.75em;
   color: #0288d1;
   margin: 0.15em 0 0.6em 0;
@@ -189,7 +187,6 @@
 }
 
 .journey-subdates {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   font-size: 0.85em;
   color: #9199a0;
   margin-left: 0.4em;
