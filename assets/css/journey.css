@@ -198,12 +198,17 @@
 
 .journey-roleitem {
   display: flex;
-  justify-content: space-between;
-  gap: 1em;
+  flex-direction: column;
+  gap: 0.15em;
   font-size: 0.85em;
   color: #494e52;
-  padding: 0.25em 0;
+  padding: 0.35em 0;
   border-bottom: 1px solid #ebecec;
+}
+
+.journey-roleitem .journey-subdates {
+  margin-left: 0;
+  font-size: 0.8em;
 }
 
 .journey-roleitem:last-child {
