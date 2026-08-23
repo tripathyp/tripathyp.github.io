@@ -11,7 +11,7 @@ detours along the way.</p>
 
 <div class="journey-route">
 
-<div class="journey-stop">
+<div class="journey-stop" style="margin-bottom: 2.5em;">
 <span class="journey-dot"><i class="fas fa-house"></i></span>
 <div class="journey-card">
 <p class="journey-place">Patna, Bihar, India</p>
@@ -19,7 +19,7 @@ detours along the way.</p>
 </div>
 </div>
 
-<div class="journey-stop">
+<div class="journey-stop" style="margin-bottom: 2.9em;">
 <span class="journey-dot"><i class="fas fa-graduation-cap"></i></span>
 <div class="journey-card">
 <p class="journey-place">Ranchi, Jharkhand, India</p>
@@ -32,7 +32,7 @@ built-environment similarity analysis.</p>
 </div>
 </div>
 
-<div class="journey-stop journey-minor">
+<div class="journey-stop journey-minor" style="margin-bottom: 2.3em;">
 <span class="journey-dot"><i class="fas fa-plane"></i></span>
 <div class="journey-card">
 <p class="journey-minor-text"><strong>Shimla</strong> &mdash; City GIS mapping, AGiSAC</p>
@@ -40,7 +40,7 @@ built-environment similarity analysis.</p>
 </div>
 </div>
 
-<div class="journey-stop journey-minor">
+<div class="journey-stop journey-minor" style="margin-bottom: 2.2em;">
 <span class="journey-dot"><i class="fas fa-plane"></i></span>
 <div class="journey-card">
 <p class="journey-minor-text"><strong>Patna</strong> &mdash; Open defecation status mapping, NIT Patna</p>
@@ -48,7 +48,7 @@ built-environment similarity analysis.</p>
 </div>
 </div>
 
-<div class="journey-stop journey-minor">
+<div class="journey-stop journey-minor" style="margin-bottom: 1.4em;">
 <span class="journey-dot"><i class="fas fa-plane"></i></span>
 <div class="journey-card">
 <p class="journey-minor-text"><strong>Mumbai</strong> &mdash; SAR Interferometry for surface deformation, IIT Bombay</p>
@@ -56,7 +56,7 @@ built-environment similarity analysis.</p>
 </div>
 </div>
 
-<div class="journey-stop">
+<div class="journey-stop" style="margin-bottom: 6.2em;">
 <span class="journey-dot"><i class="fas fa-briefcase"></i></span>
 <div class="journey-card">
 <p class="journey-place">Bengaluru, India</p>
@@ -77,7 +77,7 @@ co-authoring the India Higher Education Atlas.</p>
 </div>
 </div>
 
-<div class="journey-stop">
+<div class="journey-stop" style="margin-bottom: 4.9em;">
 <span class="journey-dot"><i class="fas fa-graduation-cap"></i></span>
 <div class="journey-card">
 <p class="journey-place">Santa Barbara, California, USA</p>
@@ -97,4 +97,11 @@ and economic development, combining satellite imagery, AI, and econometrics.</p>
 </div>
 
 </div>
+
+<div class="journey-outro">
+<p class="journey-outro-current">Currently back in Santa Barbara, continuing the PhD.</p>
+<p>Curious what that looks like day to day? Explore the <a href="/research/">research</a> or browse
+the <a href="/publications/">publications</a>.</p>
+</div>
+
 </div>

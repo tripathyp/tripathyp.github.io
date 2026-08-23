@@ -274,3 +274,29 @@
     transform: translateY(14px);
   }
 }
+
+/* ---- Closing note + CTA after the last stop ---- */
+
+.journey-outro {
+  max-width: 620px;
+  margin: 3.5em auto 0 auto;
+  padding-top: 1.5em;
+  border-top: 1px solid #ebecec;
+  text-align: center;
+}
+
+.journey-outro p {
+  color: #494e52;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0 0 0.6em 0;
+}
+
+.journey-outro p:last-child {
+  margin-bottom: 0;
+}
+
+.journey-outro-current {
+  font-weight: 600;
+  color: #303336;
+}
