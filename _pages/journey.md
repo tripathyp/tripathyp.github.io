@@ -15,7 +15,6 @@ detours along the way — the path that led here, mapped out stop by stop.</p>
 <span class="journey-dot"><i class="fas fa-house"></i></span>
 <div class="journey-card">
 <p class="journey-place">Patna, Bihar, India</p>
-<p class="journey-coords">25.6°N, 85.1°E</p>
 <p class="journey-role">Where it all began</p>
 </div>
 </div>
@@ -24,7 +23,6 @@ detours along the way — the path that led here, mapped out stop by stop.</p>
 <span class="journey-dot"><i class="fas fa-graduation-cap"></i></span>
 <div class="journey-card">
 <p class="journey-place">Ranchi, Jharkhand, India</p>
-<p class="journey-coords">23.3°N, 85.3°E</p>
 <p class="journey-role">Integrated M.Tech in Geoinformatics &mdash; Central University of Jharkhand</p>
 <p class="journey-dates">08/2013 &ndash; 05/2018</p>
 <p class="journey-desc">A five-year combined undergraduate and master's program. Along the
@@ -62,7 +60,6 @@ built-environment similarity analysis.</p>
 <span class="journey-dot"><i class="fas fa-briefcase"></i></span>
 <div class="journey-card">
 <p class="journey-place">Bengaluru, India</p>
-<p class="journey-coords">12.9°N, 77.6°E</p>
 <p class="journey-role">Indian Institute for Human Settlements (IIHS)</p>
 <p class="journey-dates">08/2017 &ndash; 03/2023</p>
 <p class="journey-desc">Nearly six years at IIHS's Geospatial Lab, spanning building height
@@ -84,7 +81,6 @@ co-authoring the India Higher Education Atlas.</p>
 <span class="journey-dot"><i class="fas fa-graduation-cap"></i></span>
 <div class="journey-card">
 <p class="journey-place">Santa Barbara, California, USA</p>
-<p class="journey-coords">34.4°N, 119.8°W</p>
 <p class="journey-role">PhD in Geography &mdash; University of California, Santa Barbara</p>
 <p class="journey-dates">09/2022 &ndash; present</p>
 <p class="journey-desc">Researching the causal impacts of extreme weather events on human

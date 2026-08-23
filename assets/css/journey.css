@@ -117,14 +117,6 @@
   line-height: 1.25;
 }
 
-.journey-coords {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-  font-size: 0.7em;
-  letter-spacing: 0.02em;
-  color: #9199a0;
-  margin: 0 0 0.5em 0;
-}
-
 .journey-role {
   font-weight: 600;
   color: #494e52;
