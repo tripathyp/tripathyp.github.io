@@ -62,7 +62,7 @@ built-environment similarity analysis.</p>
 <p class="journey-place">Bengaluru, India</p>
 <p class="journey-role">Indian Institute for Human Settlements (IIHS)</p>
 <p class="journey-dates">08/2017 &ndash; 03/2023</p>
-<p class="journey-desc">Nearly six years at IIHS's Geospatial Lab, spanning building height
+<p class="journey-desc">Nearly five years at IIHS's Geospatial Lab, spanning building height
 mapping, street network analysis, flood mapping, and population datasets, alongside
 co-authoring the India Higher Education Atlas.</p>
 
