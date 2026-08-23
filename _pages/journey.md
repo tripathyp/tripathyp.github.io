@@ -7,7 +7,7 @@ author_profile: true
 <div class="journey-page">
 
 <p class="journey-intro">From Patna to Ranchi to Bengaluru to Santa Barbara, with a few
-detours along the way — the path that led here, mapped out stop by stop.</p>
+detours along the way.</p>
 
 <div class="journey-route">
 
