@@ -78,6 +78,36 @@
   left: -1em;
 }
 
+/* ---- Minor stops: internships, in true chronological position on the
+   axis but visually lighter-weight than the major degree/job stops ---- */
+
+.journey-stop.journey-minor {
+  margin-bottom: 1.8em;
+}
+
+.journey-stop.journey-minor .journey-dot {
+  width: 1.3em;
+  height: 1.3em;
+  font-size: 0.6em;
+  border-color: #e0793f;
+  color: #e0793f;
+}
+
+.journey-stop.journey-minor:nth-child(odd) .journey-dot {
+  right: -0.65em;
+}
+
+.journey-stop.journey-minor:nth-child(even) .journey-dot {
+  left: -0.65em;
+}
+
+.journey-minor-text {
+  font-size: 0.85em;
+  color: #494e52;
+  margin: 0 0 0.15em 0;
+  line-height: 1.4;
+}
+
 .journey-place {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-weight: 600;

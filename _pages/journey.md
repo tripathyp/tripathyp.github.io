@@ -31,29 +31,30 @@ detours along the way — the path that led here, mapped out stop by stop.</p>
 way: a B.Tech project on Markov Chain and Cellular Automata-based urban growth modelling
 of Delhi, and an M.Tech thesis delineating urban neighbourhoods in Bengaluru using
 built-environment similarity analysis.</p>
-
-<div class="journey-sublist">
-<p class="journey-sublist-label">Summers along the way</p>
-
-<div class="journey-subitem">
-<i class="fas fa-plane journey-subicon"></i>
-<span class="journey-subtext"><strong>Shimla</strong> &mdash; City GIS mapping, AGiSAC
-<span class="journey-subdates">05/2015&ndash;06/2015</span></span>
+</div>
 </div>
 
-<div class="journey-subitem">
-<i class="fas fa-plane journey-subicon"></i>
-<span class="journey-subtext"><strong>Patna</strong> &mdash; Open defecation status mapping, NIT Patna
-<span class="journey-subdates">06/2016&ndash;07/2016</span></span>
+<div class="journey-stop journey-minor">
+<span class="journey-dot"><i class="fas fa-plane"></i></span>
+<div class="journey-card">
+<p class="journey-minor-text"><strong>Shimla</strong> &mdash; City GIS mapping, AGiSAC</p>
+<p class="journey-subdates">05/2015 &ndash; 06/2015</p>
+</div>
 </div>
 
-<div class="journey-subitem">
-<i class="fas fa-plane journey-subicon"></i>
-<span class="journey-subtext"><strong>Mumbai</strong> &mdash; SAR Interferometry for surface deformation, IIT Bombay
-<span class="journey-subdates">06/2017&ndash;07/2017</span></span>
+<div class="journey-stop journey-minor">
+<span class="journey-dot"><i class="fas fa-plane"></i></span>
+<div class="journey-card">
+<p class="journey-minor-text"><strong>Patna</strong> &mdash; Open defecation status mapping, NIT Patna</p>
+<p class="journey-subdates">06/2016 &ndash; 07/2016</p>
+</div>
 </div>
 
-</div>
+<div class="journey-stop journey-minor">
+<span class="journey-dot"><i class="fas fa-plane"></i></span>
+<div class="journey-card">
+<p class="journey-minor-text"><strong>Mumbai</strong> &mdash; SAR Interferometry for surface deformation, IIT Bombay</p>
+<p class="journey-subdates">06/2017 &ndash; 07/2017</p>
 </div>
 </div>
 
@@ -88,15 +89,14 @@ co-authoring the India Higher Education Atlas.</p>
 <p class="journey-dates">09/2022 &ndash; present</p>
 <p class="journey-desc">Researching the causal impacts of extreme weather events on human
 and economic development, combining satellite imagery, AI, and econometrics.</p>
+</div>
+</div>
 
-<div class="journey-sublist">
-<p class="journey-sublist-label">Along the way</p>
-<div class="journey-subitem">
-<i class="fas fa-plane journey-subicon"></i>
-<span class="journey-subtext"><strong>New York City</strong> &mdash; Summer Associate, Geospatial Data Scientist, Balyasny Asset Management
-<span class="journey-subdates">06/2026&ndash;08/2026</span></span>
-</div>
-</div>
+<div class="journey-stop journey-minor">
+<span class="journey-dot"><i class="fas fa-plane"></i></span>
+<div class="journey-card">
+<p class="journey-minor-text"><strong>New York City</strong> &mdash; Summer Associate, Geospatial Data Scientist, Balyasny Asset Management</p>
+<p class="journey-subdates">06/2026 &ndash; 08/2026</p>
 </div>
 </div>
 
