@@ -9,8 +9,8 @@ redirect_from:
 
 
 Hi, I'm Pratyush Tripathy, a PhD student in Geography at UC Santa Barbara. I work on environmental and
-development problems where the data needed to answer them doesn't exist yet, so a lot of my work is
-finding ways to generate that data using satellite data and AI.
+development problems, and more often in settings where the data don't exist yet, so a lot of my work
+is finding ways to generate that data using satellite data and AI models.
 
 My doctoral research focuses on how flooding affects people's livelihoods in India. I'm also interested
 in how far AI can be pushed to help answer cause-and-effect questions better than standard methods. I
