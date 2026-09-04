@@ -8,6 +8,8 @@ author_profile: true
 {% include base_path %}
 {% include subscribe-widget.html %}
 <div class="blogs-listing">
+<p>I share my thoughts and hands-on tutorials on new tech. If you'd like to follow along, drop your email in the widget on the right.</p>
+
 {% assign current_year = '' %}
 {% for post in site.blogs reversed %}
   {% assign post_year = post.date | date: '%Y' %}
