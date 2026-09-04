@@ -7,6 +7,7 @@ author_profile: true
 
 {% include base_path %}
 {% include subscribe-widget.html %}
+<div class="blogs-listing">
 {% assign current_year = '' %}
 {% for post in site.blogs reversed %}
   {% assign post_year = post.date | date: '%Y' %}
@@ -21,3 +22,4 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 {% unless site.blogs == empty %}</div>{% endunless %} {% comment %} Close the last collapsible-content div {% endcomment %}
+</div>
