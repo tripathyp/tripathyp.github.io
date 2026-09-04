@@ -1,3 +1,11 @@
+- title: "Assessing fire-exposed vegetation in the Orinoco Basin using Sentinel-2 and deep learning"
+  authors: "Anaya, J. A., Montero, D., Tripathy, P., Schroeder, W., Hantson, S., Bastarrika, A., & Mahecha, M. D."
+  year: 2026
+  url: "https://doi.org/10.1016/j.susgeo.2026.100031"
+  category: "journal"
+  tags:
+    - "ML/AI"
+
 - title: "Zero-shot inference strategies for smallholder (< 0.1 ha) agriculture field delineation with the Segment Anything foundation model"
   authors: "Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R."
   year: 2026
