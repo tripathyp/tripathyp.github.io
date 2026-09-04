@@ -1,0 +1,100 @@
+<!-- Email signup widget, matching the one injected into individual blog posts
+     (see scripts/inject_subscribe_widget.py). Kept in sync manually. -->
+<div id="subscribe-widget">
+  <style>
+    #subscribe-widget {
+      position: fixed;
+      top: 120px;
+      right: 24px;
+      width: 250px;
+      padding: 1.25em;
+      background-color: #fff;
+      border: 1px solid #f0f1f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      font-size: 0.85em;
+      line-height: 1.5;
+      color: #494e52;
+      z-index: 100;
+    }
+    #subscribe-widget p { margin: 0 0 0.8em 0; }
+    #subscribe-widget .subscribe-label {
+      font-weight: 600;
+      color: #303336;
+      margin-bottom: 0.4em;
+    }
+    #subscribe-widget input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.55em 0.7em;
+      margin-bottom: 0.6em;
+      font-size: 0.95em;
+      font-family: inherit;
+      color: #494e52;
+      border: 1px solid #d8dadb;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    #subscribe-widget input[type="email"]:focus {
+      border-color: #0288d1;
+    }
+    #subscribe-widget button {
+      width: 100%;
+      padding: 0.55em;
+      font-size: 0.95em;
+      font-family: inherit;
+      font-weight: 600;
+      color: #fff;
+      background-color: #0288d1;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+    #subscribe-widget button:hover {
+      background-color: #026da3;
+    }
+    #subscribe-widget .subscribe-honeypot { display: none !important; }
+    #subscribe-widget .subscribe-thanks {
+      display: none;
+      margin: 0;
+      color: #0288d1;
+      font-weight: 600;
+    }
+    @media screen and (max-width: 1300px) {
+      #subscribe-widget {
+        position: static;
+        width: auto;
+        max-width: 250px;
+        margin: 2em 0;
+      }
+    }
+  </style>
+  <p class="subscribe-label">Get notified of new posts</p>
+  <p>Leave your email to hear about new blog posts in the future.</p>
+  <form id="subscribe-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfWv1VgDAg5JNeeQNQjMbC7M9n2U7b29XyRDF954ZVMRbp0ZA/formResponse" method="POST" target="subscribe-hidden-iframe">
+    <input type="email" name="entry.1898607375" placeholder="you@example.com" required>
+    <input type="text" name="website" class="subscribe-honeypot" tabindex="-1" autocomplete="off">
+    <button type="submit">Notify me</button>
+  </form>
+  <p class="subscribe-thanks">Thanks - you're on the list!</p>
+  <iframe name="subscribe-hidden-iframe" style="display:none"></iframe>
+  <script>
+  (function() {
+    var form = document.getElementById("subscribe-form");
+    var thanks = document.querySelector("#subscribe-widget .subscribe-thanks");
+    form.addEventListener("submit", function(e) {
+      var honeypot = form.querySelector(".subscribe-honeypot");
+      if (honeypot.value) {
+        e.preventDefault();
+        return;
+      }
+      setTimeout(function() {
+        form.style.display = "none";
+        thanks.style.display = "block";
+      }, 300);
+    });
+  })();
+  </script>
+</div>
