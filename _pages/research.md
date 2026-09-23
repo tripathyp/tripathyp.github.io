@@ -14,11 +14,9 @@ explore include (hover or tap a tile to read more):
     <div class="flip-card-inner">
       <div class="flip-card-front"><h2>Floods</h2></div>
       <div class="flip-card-back">
-        <p>I built Global Flood Mapper, a cloud-based tool that maps flood extent from Sentinel-1 SAR and
-        assesses impacts on land cover and population, and I develop deep learning methods to separate
-        natural flooding from managed inundation (e.g. irrigation) in SAR imagery.</p>
-        <p>I also study how flood risk is perceived versus actually assessed across India, and my
-        dissertation examines the causal impacts of floods on agricultural livelihoods.</p>
+        <p>I built Global Flood Mapper for SAR-based flood mapping, and use deep learning to separate
+        natural flooding from managed inundation. My dissertation studies how flood risk is perceived
+        versus actually assessed, and its causal impacts on agricultural livelihoods, in India.</p>
       </div>
     </div>
   </div>
