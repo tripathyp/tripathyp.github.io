@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-Hi, I'm Pratyush Tripathy, a PhD student in Geography at UC Santa Barbara. I work on environmental and
+Hi, I'm Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara. I work on environmental and
 development problems, and more often in settings where the data don't exist yet, so a lot of my work
 is finding ways to generate that data using satellite data and AI models.
 
