@@ -1,0 +1,28 @@
+/* Tighter vertical rhythm for the Updates listing: the theme's default h2
+   heading margin (2em top) plus per-paragraph margins on the date/venue/
+   excerpt lines add up to a lot of scroll for a short entry. */
+
+.updates-page .archive__item-title {
+  margin: 0.6em 0 0.2em;
+  font-size: 1.05em;
+}
+
+.updates-page .archive__item {
+  margin-bottom: 0.4em;
+}
+
+.updates-page .page__meta {
+  margin: 0 0 0.3em;
+  font-size: 0.85em;
+}
+
+.updates-page .archive__item-excerpt {
+  margin: 0 0 0.2em;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.updates-page .archive__subtitle {
+  margin-top: 1em;
+  padding-bottom: 0.3em;
+}

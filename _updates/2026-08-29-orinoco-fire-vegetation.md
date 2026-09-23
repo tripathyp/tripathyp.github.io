@@ -4,7 +4,7 @@ collection: updates
 type: "Journal Article"
 venue: "Sustainable Geosciences: People, Planet and Prosperity"
 date: 2026-08-29
-location: "Sustainable Geosciences: People, Planet and Prosperity"
+location: "Elsevier"
 ---
 
 This paper assesses fire-exposed vegetation in the Orinoco Basin using Sentinel-2 imagery and deep

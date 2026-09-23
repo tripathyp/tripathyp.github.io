@@ -11,6 +11,7 @@ author_profile: true
 
 {% endif %}
 
+<div class="updates-page">
 {% assign current_year = '' %}
 {% for post in site.updates reversed %}
   {% assign post_year = post.date | date: '%Y' %}
@@ -25,3 +26,4 @@ author_profile: true
   {% include archive-single-update.html %}
 {% endfor %}
 {% unless site.updates == empty %}</div>{% endunless %} {% comment %} Close the last collapsible-content div {% endcomment %}
+</div>
