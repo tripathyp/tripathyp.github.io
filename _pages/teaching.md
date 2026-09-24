@@ -27,5 +27,6 @@ Courses Taught at Indian Institute for Human Settlements
 
 Teaching beyond the classroom
 ------
-I run a [YouTube channel](https://www.youtube.com/@pratyushtripathy2750) of GIS and remote
-sensing tutorials, with over 1,100 subscribers and more than 100,000 views.
+I used to maintain a [YouTube channel](https://www.youtube.com/@pratyushtripathy2750) of
+GIS and remote sensing tutorials, which has over 1,100 subscribers and more than 100,000
+views. I plan to return to it after finishing the PhD.
