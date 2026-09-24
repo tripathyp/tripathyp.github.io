@@ -24,7 +24,7 @@ More on [my GitHub](https://github.com/PratyushTripathy).
 
 ## Teaching beyond the classroom
 
-I run a [YouTube channel](https://www.youtube.com/@PratyushTripathy) of GIS and remote
+I run a [YouTube channel](https://www.youtube.com/@pratyushtripathy2750) of GIS and remote
 sensing tutorials, with over 1,100 subscribers and more than 100,000 views.
 
 ## Writing for wider audiences

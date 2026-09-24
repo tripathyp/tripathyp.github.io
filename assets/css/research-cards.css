@@ -73,6 +73,8 @@
   border-radius: 8px;
   background-color: rgba(248, 248, 248, 0.45);
   pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flip-card-front h2 {
@@ -82,7 +84,8 @@
   padding: 0.35em 0.7em;
   border-radius: 4px;
   position: relative;
-  z-index: 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flip-card-back {
