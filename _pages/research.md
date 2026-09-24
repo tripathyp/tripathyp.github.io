@@ -35,22 +35,13 @@ tiles below are the areas where I work (hover or tap a tile to read more):
 
   <div class="flip-card" tabindex="0">
     <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-image: url('/images/tiles/forests.jpg');"><h2>Forests and Conservation</h2></div>
-      <div class="flip-card-back">
-        <p>I study how protected areas affect deforestation in the Amazon, using deep learning to
-        model what would have happened to the forest in the absence of protection.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="flip-card" tabindex="0">
-    <div class="flip-card-inner">
       <div class="flip-card-front" style="background-image: url('/images/tiles/impact.jpg');"><h2>Impact Evaluation</h2></div>
       <div class="flip-card-back">
-        <p>The thread running through these projects is building measurements that did not exist
-        before, then using them to answer cause-and-effect questions about policy. I work on
-        when satellite-derived measurements are good enough to support a causal claim, and on
-        how error in those measurements biases the estimates built on top of them.</p>
+        <p>Most policy questions turn on what would have happened otherwise, which is never
+        observed. I use machine learning to build that missing comparison, including a model
+        that predicts the deforestation the Amazon would have seen without protection. I also
+        work on how error in satellite-derived measurements biases the causal estimates built
+        on top of them.</p>
       </div>
     </div>
   </div>
