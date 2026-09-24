@@ -5,8 +5,8 @@ author_profile: true
 ---
 
 I build environmental measurements that do not yet exist, using satellite data and
-machine learning, and use them to answer cause-and-effect questions about policy. The
-tiles below are the areas where I work (hover or tap a tile to read more):
+machine learning, and use them to answer cause-and-effect questions about policy. Below are
+some of the research areas I work on.
 
 <div class="research-tiles">
 
