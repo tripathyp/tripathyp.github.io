@@ -24,3 +24,8 @@ Courses Taught at Indian Institute for Human Settlements
 ------
 - Working with Spatial Data, Skill Lab for the Urban Fellowship Program
 - Advanced GIS, Electives for the Urban Fellowship Program
+
+Teaching beyond the classroom
+------
+I run a [YouTube channel](https://www.youtube.com/@pratyushtripathy2750) of GIS and remote
+sensing tutorials, with over 1,100 subscribers and more than 100,000 views.
