@@ -37,11 +37,11 @@ tiles below are the areas where I work (hover or tap a tile to read more):
     <div class="flip-card-inner">
       <div class="flip-card-front" style="background-image: url('/images/tiles/impact.jpg');"><h2>Impact Evaluation</h2></div>
       <div class="flip-card-back">
-        <p>Most policy questions turn on what would have happened otherwise, which is never
-        observed. I use machine learning to build that missing comparison, including a model
-        that predicts the deforestation the Amazon would have seen without protection. I also
-        work on how error in satellite-derived measurements biases the causal estimates built
-        on top of them.</p>
+        <p>Most policy questions turn on what would have happened otherwise, and in the real world
+        that counterfactual is almost never observed. I build machine learning models to generate
+        it. One is a physics-aware transformer that predicts the deforestation the Amazon would
+        have seen without protection, which is what makes it possible to measure what protected
+        areas actually achieved.</p>
       </div>
     </div>
   </div>
