@@ -13,14 +13,12 @@ environmental and development problems, often in settings where the data needed 
 answer the question don't exist yet, so much of my work is building that data from
 satellite imagery and AI models.
 
-My doctoral research asks how flooding affects people's livelihoods in India, from where
-the water reaches, to who understands themselves to be at risk, to what it costs them.
-I'm also interested in how far AI can be pushed to answer cause-and-effect questions that
-conventional data cannot, and in the ways AI models fail on geospatial data without
-anyone noticing.
-
-Alongside the research, I build open-source tools so these methods are usable by the
-people making the decisions.
+My doctoral research asks how flooding affects people's livelihoods in India, from flood
+extent mapped with satellite imagery, to who understands themselves to be at risk, to the
+consequences for agricultural productivity and economic development.
+I'm also interested in how far state-of-the-art models from computer science can be pushed
+to answer cause-and-effect questions that conventional data cannot, and in the hidden
+pitfalls of applying those models to geospatial data.
 
 To learn more, please check my [Research](/research/) and [Publications](/publications/),
 or read about [how I got here](/journey/).
