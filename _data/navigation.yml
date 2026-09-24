@@ -11,12 +11,15 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "Software & Outreach"
+    url: /software/
+
   - title: "Blogs"
     url: /blogs/
 
   - title: "Updates"
     url: /updates/
-
-  - title: "Journey"
-    url: /journey/
 

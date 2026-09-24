@@ -83,7 +83,7 @@ author_profile: true
         {% assign row_num = row_num | plus: 1 %}
         <tr>
             <td>{{ row_num }}</td>
-            <td>{{ pub.authors }}</td>
+            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
             <td>
@@ -127,7 +127,7 @@ author_profile: true
         {% assign row_num = row_num | plus: 1 %}
         <tr>
             <td>{{ row_num }}</td>
-            <td>{{ pub.authors }}</td>
+            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
             <td>
@@ -171,7 +171,7 @@ author_profile: true
         {% assign row_num = row_num | plus: 1 %}
         <tr>
             <td>{{ row_num }}</td>
-            <td>{{ pub.authors }}</td>
+            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
             <td>{{ pub.year }}</td>
             <td>{{ pub.title }}</td>
             <td>
