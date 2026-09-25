@@ -23,3 +23,6 @@ main:
   - title: "Updates"
     url: /updates/
 
+  - title: "CV"
+    url: /files/CV.pdf
+
