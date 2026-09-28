@@ -201,7 +201,7 @@ defaults:
       path: ""
       type: updates
     values:
-      layout: updates
+      layout: single
       author_profile: true
       share: true
   # _blogs
