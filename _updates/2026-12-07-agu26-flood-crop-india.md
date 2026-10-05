@@ -4,7 +4,7 @@ collection: updates
 type: "Conference"
 venue: "AGU Annual Meeting 2026"
 date: 2026-12-07
-location: "2010 - West, Moscone Center"
+location: "San Francisco, CA"
 ---
 
-I'll be presenting our work on how floods affect crop productivity in India at AGU 2026 (session GC12C).
+I’ll be presenting our work on how floods affect crop productivity in India. Read details [here](https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2073394).
