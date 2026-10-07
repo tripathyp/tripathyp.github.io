@@ -36,6 +36,10 @@ layout: null
     color: #0288d1;
     text-decoration: underline;
   }
+  .redirect-count {
+    font-weight: 600;
+    color: #0288d1;
+  }
   @media screen and (max-width: 600px) {
     .redirect-message {
       font-size: 1.3em;
@@ -45,8 +49,23 @@ layout: null
 </head>
 <body>
   <p class="redirect-message">
-    You will be redirected to the paper within 5 seconds.<br>
+    You will be redirected to the paper within <span class="redirect-count" id="redirect-count">5</span> seconds.<br>
     If not, <a href="https://tripathyp.github.io/research/">click here</a>.
   </p>
+  <script>
+    /* mirrors the meta-refresh above; purely visual, the meta tag still does the actual redirect */
+    (function () {
+      var secondsLeft = 5;
+      var countEl = document.getElementById("redirect-count");
+      var timer = setInterval(function () {
+        secondsLeft -= 1;
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          return;
+        }
+        countEl.textContent = secondsLeft;
+      }, 1000);
+    })();
+  </script>
 </body>
 </html>
