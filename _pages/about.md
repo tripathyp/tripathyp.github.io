@@ -8,17 +8,9 @@ redirect_from:
 ---
 
 
-Hi, I'm Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara. I work on
-environmental and development problems, often in settings where the data needed to
-answer the question don't exist yet, so much of my work is building that data from
-satellite imagery and AI models.
+Hi, I’m Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara. I study floods, protected forests, and smallholder agriculture, usually in data-scarce settings where the evidence a policy question needs does not yet exist. Much of my work is therefore building that evidence from satellite images and machine learning, so that policy choices can rest on quantitative estimates.
 
-My doctoral research investigates the impact of flooding on people's livelihoods, from
-mapping flood extent using satellite imagery, to who understands themselves to be at risk,
-to the consequences for agricultural productivity and economic development. I'm also
-interested in how far state-of-the-art models from computer science can be pushed to
-facilitate causal analysis that conventional data cannot support. Additionally, I am
-always curious about the hidden pitfalls of applying these AI models to geospatial data.
+My doctoral research covers three parts of the flood problem. I work on reducing the uncertainty in flood maps built from satellite images, on whether the populations most exposed perceive themselves to be at risk, and on the causal impact of flooding on agricultural productivity. I’m also interested in how far machine learning models can be pushed to support causal analysis, and where those models quietly fail when they meet environmental data.
 
 To learn more, please check my [Research](/research/) and [Publications](/publications/),
 or read about [how I got here](/journey/).
