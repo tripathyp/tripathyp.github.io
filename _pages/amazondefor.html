@@ -8,7 +8,7 @@ layout: null
 <meta charset="utf-8">
 <title>Redirecting...</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="5;url=https://edge.geog.ucsb.edu">
+<meta http-equiv="refresh" content="10;url=https://edge.geog.ucsb.edu">
 <link rel="canonical" href="https://edge.geog.ucsb.edu">
 <style>
   html, body {
@@ -40,6 +40,12 @@ layout: null
     font-weight: 600;
     color: #0288d1;
   }
+  .redirect-note {
+    font-size: 0.5em;
+    line-height: 1.5;
+    color: #767a7d;
+    margin-top: 1.2em;
+  }
   @media screen and (max-width: 600px) {
     .redirect-message {
       font-size: 1.3em;
@@ -50,13 +56,15 @@ layout: null
 <body>
   <p class="redirect-message">
     You will be redirected to the preprint within<br>
-    <span class="redirect-count" id="redirect-count">5</span> seconds.<br>
+    <span class="redirect-count" id="redirect-count">10</span> seconds.<br>
     If not, <a href="https://edge.geog.ucsb.edu">click here</a>.
+    <br>
+    <span class="redirect-note">This is an early version of the preprint and may contain minor inaccuracies.</span>
   </p>
   <script>
     /* mirrors the meta-refresh above; purely visual, the meta tag still does the actual redirect */
     (function () {
-      var secondsLeft = 5;
+      var secondsLeft = 10;
       var countEl = document.getElementById("redirect-count");
       var timer = setInterval(function () {
         secondsLeft -= 1;
