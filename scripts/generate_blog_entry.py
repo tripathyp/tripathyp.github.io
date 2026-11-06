@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Auto-generate a _blogs/<date>-<slug>.md entry from a blog notebook's front matter.
+"""Auto-generate a _writing/<date>-<slug>.md entry from a blog notebook's front matter.
 
 Only creates the file if it doesn't already exist, so hand edits (e.g. a
 custom teaser sentence) made after the first run are never overwritten.
@@ -61,7 +61,7 @@ def main():
     # starts with it (e.g. "2026-08-22-my-post.ipynb").
     entry_stem = stem if stem.startswith(f"{date}-") else f"{date}-{stem}"
 
-    blogs_dir = Path("_blogs")
+    blogs_dir = Path("_writing")
     blogs_dir.mkdir(exist_ok=True)
     entry_path = blogs_dir / f"{entry_stem}.md"
 
