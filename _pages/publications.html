@@ -13,14 +13,12 @@ author_profile: true
 <ol>
     {% for pub in publications %}
     {% if pub.category == "journal" %}
+    {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
-        <a href="{{ pub.url }}" target="_blank">{% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}</a>
-        <br>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
+        <br>
         <span class="page__meta">{{ pub.status }}</span>
-        {% elsif pub.venue %}
-        <span class="page__meta"><i>{{ pub.venue }}</i></span>
         {% endif %}
     </li>
     {% endif %}
@@ -50,14 +48,12 @@ author_profile: true
 <ol>
     {% for pub in publications %}
     {% if pub.category == "book" %}
+    {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
-        <a href="{{ pub.url }}" target="_blank">{% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}</a>
-        <br>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
+        <br>
         <span class="page__meta">{{ pub.status }}</span>
-        {% elsif pub.venue %}
-        <span class="page__meta"><i>{{ pub.venue }}</i></span>
         {% endif %}
     </li>
     {% endif %}
@@ -66,26 +62,22 @@ author_profile: true
 
 <h2>Reports</h2>
 <ol>
+    <li>
+        <strong>Tripathy, P.</strong>, Balakrishnan, K., Malladi, T., Kiran, A., & Bhan, G. (2022). <a href="https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Methods-for-spatial-sampling-of-urban/995644132802676" target="_blank">Methods for spatial sampling of urban neighbourhoods by socio-economic status in Indian cities</a>. ILO, New Delhi.
+    </li>
     {% for pub in publications %}
     {% if pub.category == "report" %}
+    {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
-        <a href="{{ pub.url }}" target="_blank">Link</a>
-        <br>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
+        <br>
         <span class="page__meta">{{ pub.status }}</span>
-        {% elsif pub.venue %}
-        <span class="page__meta"><i>{{ pub.venue }}</i></span>
         {% endif %}
     </li>
     {% endif %}
     {% endfor %}
     <li>
-        <strong>Tripathy, P.</strong>, Balakrishnan, K., Malladi, T., Kiran, A., & Bhan, G. (2022). Methods for spatial sampling of urban neighbourhoods by socio-economic status in Indian cities. ILO, New Delhi.
-        <a href="https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Methods-for-spatial-sampling-of-urban/995644132802676" target="_blank">Link</a>
-    </li>
-    <li>
-        Malladi, T., Mayavel, D., Chatterji, N., & <strong>Tripathy, P.</strong> (2018). In A. Revi (Ed.), India Higher Education Atlas [Vols. 4, 5 and 6]. Indian Institute for Human Settlements.
-        <a href="https://iihs.co.in/project/india-higher-education-atlas/" target="_blank">Link</a>
+        Malladi, T., Mayavel, D., Chatterji, N., & <strong>Tripathy, P.</strong> (2018). In A. Revi (Ed.), <a href="https://iihs.co.in/project/india-higher-education-atlas/" target="_blank">India Higher Education Atlas [Vols. 4, 5 and 6]</a>. Indian Institute for Human Settlements.
     </li>
 </ol>
