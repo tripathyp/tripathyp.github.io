@@ -15,7 +15,7 @@ author_profile: true
     {% if pub.category == "journal" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
         <span class="page__meta pub-meta">{{ pub.status }}</span>
@@ -50,7 +50,7 @@ author_profile: true
     {% if pub.category == "book" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
         <span class="page__meta pub-meta">{{ pub.status }}</span>
@@ -69,7 +69,7 @@ author_profile: true
     {% if pub.category == "report" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
         <span class="page__meta pub-meta">{{ pub.status }}</span>
