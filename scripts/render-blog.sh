@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Renders a blog_notebooks/<path>.ipynb into the matching blogs/<path>/ folder.
+# Renders a blog_notebooks/<path>.ipynb into the matching writing/<path>/ folder.
 #
 # Usage: scripts/render-blog.sh blog_notebooks/2026/02/ptplot.ipynb
 
@@ -33,7 +33,7 @@ if [ "$NOTEBOOK_BASE" != "$LOWER_BASE" ]; then
 fi
 
 RELATIVE_DIR="$(dirname "${NOTEBOOK#blog_notebooks/}")"
-OUTPUT_DIR="$REPO_ROOT/blogs/$RELATIVE_DIR"
+OUTPUT_DIR="$REPO_ROOT/writing/$RELATIVE_DIR"
 
 mkdir -p "$OUTPUT_DIR"
 python3 "$REPO_ROOT/scripts/fix_colab_badge.py" "$NOTEBOOK"
@@ -49,4 +49,4 @@ python3 "$REPO_ROOT/scripts/inject_analytics.py" "$RENDERED_HTML"
 rm -f "$REPO_ROOT/$(dirname "$NOTEBOOK")/.gitignore"
 
 echo ""
-echo "Rendered to: blogs/$RELATIVE_DIR/"
+echo "Rendered to: writing/$RELATIVE_DIR/"
