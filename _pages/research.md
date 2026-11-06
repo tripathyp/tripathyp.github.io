@@ -4,9 +4,7 @@ permalink: /research/
 author_profile: true
 ---
 
-I build environmental measurements that do not yet exist, using satellite data and
-machine learning, and use them to answer cause-and-effect questions about policy. Below are
-some of the research areas I work on.
+My work runs from measurement to evaluation. I build environmental measurements from satellite imagery and machine learning, develop the tools that make them usable at scale, and use them to estimate the effects that environmental policy turns on.
 
 <div class="research-tiles">
 
