@@ -10,7 +10,7 @@ redirect_from:
 
 Hi, I’m Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara and a NASA FINESST Future Investigator.
 
-I study how environmental change affects people, and whether the policies meant to address it achieve what they intend. Both are causal questions, and I work on them through impact evaluation of human-environment problems. Off-the-shelf geospatial products are built for general purposes and rarely meet what causal analysis requires, so much of my work is building the environmental measurements themselves, with machine learning, designed around what impact evaluation demands of them.
+I study what environmental change costs the people exposed to it, and whether the policies meant to protect them work. Answering those questions takes measurements that off-the-shelf satellite products do not provide, since they are built for general use rather than for the comparison a particular question demands. I build those measurements, then use them to estimate what a shock or a policy actually did.
 
 One strand of my work is forest conservation in the Amazon, where I estimate what protection has actually achieved. The other is floods, which I work on across the chain: mapping flood extent from satellite data, measuring whether the people most exposed perceive themselves to be at risk, and estimating what flooding costs the farms and households in its path. Alongside both, I study how errors in machine-learned maps carry into the decisions those maps inform.
 
