@@ -8,11 +8,11 @@ redirect_from:
 ---
 
 
-Hi, I’m Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara and a NASA FINESST Future Investigator. I study floods, protected forests, and smallholder agriculture, usually in data-scarce settings where the evidence a policy question needs does not yet exist. Much of my work is therefore building that evidence from satellite images and machine learning, so that policy choices can rest on quantitative estimates.
+Hi, I’m Pratyush Tripathy, a PhD candidate in Geography at UC Santa Barbara and a NASA FINESST Future Investigator.
 
-My doctoral research covers three parts of the flood problem. I work on reducing the uncertainty in flood maps built from satellite images, on whether the populations most exposed perceive themselves to be at risk, and on the causal impact of flooding on agricultural productivity. I’m also interested in how far machine learning models can be pushed to support causal analysis, and where those models quietly fail when they meet environmental data.
+I study how environmental change affects people, and whether the policies meant to address it achieve what they intend. Both are causal questions, and I work on them through impact evaluation of human-environment problems. Off-the-shelf geospatial products are built for general purposes and rarely meet what causal analysis requires, so much of my work is building the environmental measurements themselves, with machine learning, designed around what impact evaluation demands of them.
 
-To learn more, please check my [Research](/research/) and [Publications](/publications/).
+One strand of my work is forest conservation in the Amazon, where I estimate what protection has actually achieved. The other is floods, which I work on across the chain: mapping flood extent from satellite data, measuring whether the people most exposed perceive themselves to be at risk, and estimating what flooding costs the farms and households in its path. Alongside both, I study how errors in machine-learned maps carry into the decisions those maps inform.
 
 <div class="recent-work" markdown="1">
 
