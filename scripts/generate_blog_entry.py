@@ -78,7 +78,7 @@ def main():
     content = (
         "---\n"
         f'title: "{title}"\n'
-        "collection: blogs\n"
+        "collection: writing\n"
         'type: "Blog Post"\n'
         'venue: "Personal Website"\n'
         f"date: {date}\n"

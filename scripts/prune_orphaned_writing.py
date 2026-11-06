@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Delete _blogs/*.md entries whose source notebook no longer exists.
+"""Delete _writing/*.md entries whose source notebook no longer exists.
 
 Only touches entries that carry a `notebook:` front-matter field (i.e. ones
 created by generate_blog_entry.py) - anything else is left alone, since it
@@ -12,7 +12,7 @@ NOTEBOOK_FIELD_RE = re.compile(r"^notebook:\s*(\S+)\s*$", re.MULTILINE)
 
 
 def main():
-    blogs_dir = Path("_blogs")
+    blogs_dir = Path("_writing")
     if not blogs_dir.is_dir():
         return
 
