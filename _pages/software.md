@@ -17,11 +17,10 @@ data without processing large volumes of imagery or writing cloud code.
 - **[AutoFloods](https://github.com/PratyushTripathy/AutoFloods)** — a Python package for
 automated flood mapping at scale from Sentinel-1 SAR imagery, which divides large regions
 into tiles so a workflow can run from a single tile up to a country-wide analysis.
-Currently in alpha release.
 - **[COINS](https://github.com/PratyushTripathy/COINS)** — a tool to extract street
 hierarchy from raw OpenStreetMap network data. Now integrated into the MomePy Python
 package, and roughly ten times faster than the originally published version.
 - **[LandSTAC](https://github.com/PratyushTripathy/LandSTAC)** — a Python project
-connecting to the USGS LandsatLook STAC API. Currently in testing.
+connecting to the USGS LandsatLook STAC API.
 
 More on [my GitHub](https://github.com/PratyushTripathy).
