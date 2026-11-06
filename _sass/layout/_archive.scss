@@ -25,6 +25,15 @@
       }
     }
   }
+
+  p:not(.archive__item-excerpt), li, dl, td, blockquote {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .page__meta {
+    font-size: 0.78rem;
+  }
 }
 
 .archive__subtitle {

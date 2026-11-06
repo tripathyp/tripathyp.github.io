@@ -55,8 +55,13 @@
     border-bottom: 1px solid var(--global-border-color);
   }
 
-  p, li, dl {
-    font-size: 1em;
+  p, li, dl, td, blockquote {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .page__meta {
+    font-size: 0.78rem;
   }
 
   /* paragraph indents */
