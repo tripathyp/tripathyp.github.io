@@ -15,10 +15,10 @@ author_profile: true
     {% if pub.category == "journal" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
-        <span class="page__meta">{{ pub.status }}</span>
+        <span class="page__meta pub-meta">{{ pub.status }}</span>
         {% endif %}
     </li>
     {% endif %}
@@ -30,17 +30,17 @@ author_profile: true
     <li>
         <strong>Tripathy, P.</strong>, Baylis, K., & Caylor, K. Separating flood hazard from non-hazard smooth surfaces in Sentinel-1 SAR.
         <br>
-        <span class="page__meta">Manuscript in preparation.</span>
+        <span class="page__meta pub-meta">Manuscript in preparation.</span>
     </li>
     <li>
         <strong>Tripathy, P.</strong>, Baylis, K., Latka, C., & Heilmayr, R. Counterfactual modeling using deep learning reveals spatially-explicit impact of protected areas in the Amazon forests.
         <br>
-        <span class="page__meta">Manuscript in preparation. <a href="/files/amazon-deforestation-preprint.pdf" target="_blank">PDF</a></span>
+        <span class="page__meta pub-meta">Manuscript in preparation. <a href="/files/amazon-deforestation-preprint.pdf" target="_blank">PDF</a></span>
     </li>
     <li>
         <strong>Tripathy, P.</strong>, Scholnick, Z., Zhou, J., Baylis, K., Caylor, K., & Heilmayr, R. Large scale decadal 10m crop classification in highly diverse Indo-Gangetic Plains in India.
         <br>
-        <span class="page__meta">Manuscript in preparation.</span>
+        <span class="page__meta pub-meta">Manuscript in preparation.</span>
     </li>
 </ol>
 
@@ -50,10 +50,10 @@ author_profile: true
     {% if pub.category == "book" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
-        <span class="page__meta">{{ pub.status }}</span>
+        <span class="page__meta pub-meta">{{ pub.status }}</span>
         {% endif %}
     </li>
     {% endif %}
@@ -69,10 +69,10 @@ author_profile: true
     {% if pub.category == "report" %}
     {% assign last_char = pub.title | slice: -1, 1 %}
     <li>
-        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i>{{ pub.venue }}</i>.{% endif %}
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}{% unless last_char == "?" %}.{% endunless %}{% if pub.venue %} <i class="pub-meta">{{ pub.venue }}</i>.{% endif %}
         {% if pub.status %}
         <br>
-        <span class="page__meta">{{ pub.status }}</span>
+        <span class="page__meta pub-meta">{{ pub.status }}</span>
         {% endif %}
     </li>
     {% endif %}

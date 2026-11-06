@@ -33,7 +33,7 @@ My work runs from measurement to evaluation. I build environmental measurements 
 
   <div class="flip-card" tabindex="0">
     <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-image: url('/images/tiles/impact.jpg');"><h2>Impact Evaluation</h2></div>
+      <div class="flip-card-front" style="background-image: url('/images/tiles/impact.jpg');"><h2>Forest Conservation</h2></div>
       <div class="flip-card-back">
         <p>Most policy questions turn on what would have happened otherwise, and in the real world
         that counterfactual is almost never observed. I build machine learning models to generate
