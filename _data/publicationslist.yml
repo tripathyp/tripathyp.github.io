@@ -1,8 +1,27 @@
+- title: "National-scale mapping locates the mismatch between perceived and assessed flood risk in India"
+  authors: "Tripathy, P., Upadhyay, S., Alegbeleye, O. M., Senkardesler, E., Pingali, D., Goddard, E., Thaker, J., Leiserowitz, A., & Marlon, J. R."
+  year: 2026
+  url: "https://doi.org/10.31223/X5WZ38"
+  category: "journal"
+  status: "Under review, Nature Communications. Preprint: EarthArXiv."
+  tags:
+    - "Floods"
+
+- title: "Global Flood Mapper v2: Open-Access Flood Mapping and Exposure Assessment with Sentinel-1 SAR"
+  authors: "Agrawal, A. & Tripathy, P."
+  year: 2026
+  url: "https://doi.org/10.31223/X54482"
+  category: "journal"
+  status: "Accepted, Natural Hazards."
+  tags:
+    - "Floods"
+
 - title: "Assessing fire-exposed vegetation in the Orinoco Basin using Sentinel-2 and deep learning"
   authors: "Anaya, J. A., Montero, D., Tripathy, P., Schroeder, W., Hantson, S., Bastarrika, A., & Mahecha, M. D."
   year: 2026
   url: "https://doi.org/10.1016/j.susgeo.2026.100031"
   category: "journal"
+  venue: "Sustainable Geosciences: People, Planet and Prosperity"
   tags:
     - "ML/AI"
 
@@ -11,6 +30,7 @@
   year: 2026
   url: "https://doi.org/10.1016/j.srs.2026.100425"
   category: "journal"
+  venue: "Science of Remote Sensing"
   tags:
     - "Agriculture"
     - "ML/AI"
@@ -20,6 +40,7 @@
   year: 2025
   url: "https://doi.org/10.1016/j.nhres.2025.03.011"
   category: "journal"
+  venue: "Natural Hazards Research"
   tags:
     - "Floods"
 
@@ -28,6 +49,7 @@
   year: 2023
   url: "https://doi.org/10.1007/s10661-023-11164-2"
   category: "journal"
+  venue: "Environmental Monitoring and Assessment"
   tags:
     - "Urban analysis"
 
@@ -36,6 +58,7 @@
   year: 2023
   url: "https://doi.org/10.1177/23998083231163182"
   category: "journal"
+  venue: "Environment and Planning B: Urban Analytics and City Science"
   tags:
     - "Urban analysis"
     - "ML/AI"
@@ -45,6 +68,7 @@
   year: 2022
   url: "https://doi.org/10.1007/s11069-022-05428-2"
   category: "journal"
+  venue: "Natural Hazards"
   tags:
     - "Floods"
 
@@ -53,6 +77,7 @@
   year: 2022
   url: "https://doi.org/10.1177/23998083221084990"
   category: "journal"
+  venue: "Environment and Planning B: Urban Analytics and City Science"
   tags:
     - "Urban analysis"
 
@@ -61,6 +86,7 @@
   year: 2022
   url: "https://doi.org/10.1016/j.asr.2022.02.003"
   category: "journal"
+  venue: "Advances in Space Research"
   tags:
     - "Urban analysis"
 
@@ -69,6 +95,7 @@
   year: 2021
   url: "https://doi.org/10.1016/j.uclim.2021.101059"
   category: "journal"
+  venue: "Urban Climate"
   tags:
     - "Urban analysis"
 
@@ -77,6 +104,7 @@
   year: 2021
   url: "https://doi.org/10.3390/rs13030512"
   category: "journal"
+  venue: "Remote Sensing"
   tags:
     - "Urban analysis"
     - "ML/AI"
@@ -86,6 +114,7 @@
   year: 2021
   url: "http://dx.doi.org/10.1177/2399808320967680"
   category: "journal"
+  venue: "Environment and Planning B: Urban Analytics and City Science"
   tags:
     - "Urban analysis"
 
@@ -94,47 +123,25 @@
   year: 2019
   url: "https://doi.org/10.1016/j.cities.2019.01.021"
   category: "journal"
+  venue: "Cities"
   tags:
     - "Urban analysis"
-
-- title: "National-scale mapping locates the mismatch between perceived and assessed flood risk in India"
-  authors: "Tripathy, P., Upadhyay, S., Alegbeleye, O. M., Senkardesler, E., Pingali, D., Goddard, E., Thaker, J., Leiserowitz, A., & Marlon, J. R."
-  year: 2026
-  url: "https://doi.org/10.31223/X5WZ38"
-  category: "preprint"
-  tags:
-    - "Floods"
-
-- title: "Global Flood Mapper v2: Open-Access Flood Mapping and Exposure Assessment with Sentinel-1 SAR"
-  authors: "Agrawal, A. & Tripathy, P."
-  year: 2026
-  url: "https://doi.org/10.31223/X54482"
-  category: "preprint"
-  tags:
-    - "Floods"
 
 - title: "Global Built-up and Population Datasets: Which ones should you use for India?"
   authors: "Tripathy, P. & Balakrishnan, K."
   year: 2021
   url: "https://arxiv.org/abs/2108.08304"
-  category: "preprint"
+  category: "report"
+  venue: "arXiv"
   tags:
     - "Urban analysis"
-
-- title: "A CNN based method for sub-pixel urban land cover mapping using Landsat 5 TM and Resourcesat 1 - LISS IV imagery"
-  authors: "Kumar, P. K., Balakrishnan, K. & Tripathy, P."
-  year: 2021
-  url: "https://arxiv.org/abs/2112.08841"
-  category: "preprint"
-  tags:
-    - "Urban analysis"
-    - "ML/AI"
 
 - title: "Deep learning approach for monitoring urban land cover changes"
   authors: "Perikamana, K. K., Balakrishnan, K., & Tripathy, P."
   year: 2024
   url: "https://doi.org/10.1016/B978-0-323-99164-3.00003-3"
   category: "book"
+  venue: "Earth Observation in Urban Monitoring"
   tags:
     - "Urban analysis"
     - "ML/AI"

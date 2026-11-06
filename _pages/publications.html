@@ -7,237 +7,85 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Uniform column widths, reduced width, and badge styling -->
-<style>
-    .table-striped {
-        table-layout: fixed;
-        width: 80%;
-        margin: 0;
-    }
-
-        .table-striped th:nth-child(1),
-        .table-striped td:nth-child(1) {
-            width: 3%;
-        }
-
-        .table-striped th:nth-child(2),
-        .table-striped td:nth-child(2) {
-            width: 19%;
-        }
-
-        .table-striped th:nth-child(3),
-        .table-striped td:nth-child(3) {
-            width: 8%;
-        }
-
-        .table-striped th:nth-child(4),
-        .table-striped td:nth-child(4) {
-            width: 40%;
-        }
-
-        .table-striped th:nth-child(5),
-        .table-striped td:nth-child(5) {
-            width: 20%;
-        }
-
-        .table-striped th:nth-child(6),
-        .table-striped td:nth-child(6) {
-            width: 10%;
-        }
-
-    th {
-        cursor: pointer;
-    }
-
-    .badge {
-        display: inline-block;
-        padding: 0.2em 0.4em;
-        font-size: 75%;
-        font-weight: 600;
-        color: #fff;
-        border-radius: 0.2rem;
-        margin: 0 0.2rem 0 0;
-        text-transform: capitalize;
-        background-color: #6c757d; /* fallback grey */
-    }
-</style>
-
 {% assign publications = site.data.publicationslist %}
+
+<h2>Research Articles</h2>
+<ol>
+    {% for pub in publications %}
+    {% if pub.category == "journal" %}
+    <li>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
+        <a href="{{ pub.url }}" target="_blank">{% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}</a>
+        <br>
+        {% if pub.status %}
+        <span class="page__meta">{{ pub.status }}</span>
+        {% elsif pub.venue %}
+        <span class="page__meta"><i>{{ pub.venue }}</i></span>
+        {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ol>
 
 <h2>Working Papers</h2>
 <ol>
-    <li><strong>Tripathy, P.</strong>, Baylis, K., & Caylor, K. Separating flood hazard from non-hazard smooth surfaces in Sentinel-1 SAR. Manuscript in preparation.</li>
-    <li><strong>Tripathy, P.</strong>, Baylis, K., Latka, C., & Heilmayr, R. Counterfactual modeling using deep learning reveals spatially-explicit impact of protected areas in the Amazon forests. Manuscript in preparation. <a href="/files/amazon-deforestation-preprint.pdf" target="_blank">PDF</a></li>
-    <li><strong>Tripathy, P.</strong>, Scholnick, Z., Zhou, J., Baylis, K., Caylor, K., & Heilmayr, R. Large scale decadal 10m crop classification in highly diverse Indo-Gangetic Plains in India. Manuscript in preparation.</li>
+    <li>
+        <strong>Tripathy, P.</strong>, Baylis, K., & Caylor, K. Separating flood hazard from non-hazard smooth surfaces in Sentinel-1 SAR.
+        <br>
+        <span class="page__meta">Manuscript in preparation.</span>
+    </li>
+    <li>
+        <strong>Tripathy, P.</strong>, Baylis, K., Latka, C., & Heilmayr, R. Counterfactual modeling using deep learning reveals spatially-explicit impact of protected areas in the Amazon forests.
+        <br>
+        <span class="page__meta">Manuscript in preparation. <a href="/files/amazon-deforestation-preprint.pdf" target="_blank">PDF</a></span>
+    </li>
+    <li>
+        <strong>Tripathy, P.</strong>, Scholnick, Z., Zhou, J., Baylis, K., Caylor, K., & Heilmayr, R. Large scale decadal 10m crop classification in highly diverse Indo-Gangetic Plains in India.
+        <br>
+        <span class="page__meta">Manuscript in preparation.</span>
+    </li>
 </ol>
 
-<h2>Journal Articles</h2>
-<table id="journalArticlesTable" class="table table-striped">
-    <thead>
-        <tr>
-            <th data-sort-method="number">#</th>
-            <th>Authors</th>
-            <th data-sort-method="number">Year</th>
-            <th>Title</th>
-            <th>Tags</th>
-            <th>Link</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% assign row_num = 0 %}
-        {% for pub in publications %}
-        {% if pub.category == "journal" %}
-        {% assign row_num = row_num | plus: 1 %}
-        <tr>
-            <td>{{ row_num }}</td>
-            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
-            <td>{{ pub.year }}</td>
-            <td>{{ pub.title }}</td>
-            <td>
-                {% if pub.tags %}
-                {% for tag in pub.tags %}
-                {%- assign slug = tag
-                | downcase
-                | replace: ' ', '-'
-                | replace: '/', '-' -%}
-                <span class="badge tag-{{ slug }}">{{ tag }}</span>
-                {% endfor %}
-                {% endif %}
-            </td>
-            <td>
-                <a href="{{ pub.url }}" target="_blank">
-                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
-                </a>
-            </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
-    </tbody>
-</table>
-
-<h2>Preprints</h2>
-<table id="preprintsTable" class="table table-striped">
-    <thead>
-        <tr>
-            <th data-sort-method="number">#</th>
-            <th>Authors</th>
-            <th data-sort-method="number">Year</th>
-            <th>Title</th>
-            <th>Tags</th>
-            <th>Link</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% assign row_num = 0 %}
-        {% for pub in publications %}
-        {% if pub.category == "preprint" %}
-        {% assign row_num = row_num | plus: 1 %}
-        <tr>
-            <td>{{ row_num }}</td>
-            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
-            <td>{{ pub.year }}</td>
-            <td>{{ pub.title }}</td>
-            <td>
-                {% if pub.tags %}
-                {% for tag in pub.tags %}
-                {%- assign slug = tag
-                | downcase
-                | replace: ' ', '-'
-                | replace: '/', '-' -%}
-                <span class="badge tag-{{ slug }}">{{ tag }}</span>
-                {% endfor %}
-                {% endif %}
-            </td>
-            <td>
-                <a href="{{ pub.url }}" target="_blank">
-                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
-                </a>
-            </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
-    </tbody>
-</table>
-
 <h2>Book Chapters</h2>
-<table id="bookChaptersTable" class="table table-striped">
-    <thead>
-        <tr>
-            <th data-sort-method="number">#</th>
-            <th>Authors</th>
-            <th data-sort-method="number">Year</th>
-            <th>Title</th>
-            <th>Tags</th>
-            <th>Link</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% assign row_num = 0 %}
-        {% for pub in publications %}
-        {% if pub.category == "book" %}
-        {% assign row_num = row_num | plus: 1 %}
-        <tr>
-            <td>{{ row_num }}</td>
-            <td>{{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }}</td>
-            <td>{{ pub.year }}</td>
-            <td>{{ pub.title }}</td>
-            <td>
-                {% if pub.tags %}
-                {% for tag in pub.tags %}
-                {%- assign slug = tag
-                | downcase
-                | replace: ' ', '-'
-                | replace: '/', '-' -%}
-                <span class="badge tag-{{ slug }}">{{ tag }}</span>
-                {% endfor %}
-                {% endif %}
-            </td>
-            <td>
-                <a href="{{ pub.url }}" target="_blank">
-                    {% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}
-                </a>
-            </td>
-        </tr>
+<ol>
+    {% for pub in publications %}
+    {% if pub.category == "book" %}
+    <li>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
+        <a href="{{ pub.url }}" target="_blank">{% if pub.url contains 'doi.org' %}DOI{% else %}Link{% endif %}</a>
+        <br>
+        {% if pub.status %}
+        <span class="page__meta">{{ pub.status }}</span>
+        {% elsif pub.venue %}
+        <span class="page__meta"><i>{{ pub.venue }}</i></span>
         {% endif %}
-        {% endfor %}
-    </tbody>
-</table>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ol>
 
-<!-- Tablesort for click-to-sort (self-hosted so a CDN outage can't break sorting) -->
-<script src="/assets/js/tablesort.min.js"></script>
-<script src="/assets/js/tablesort-sorts/tablesort.number.min.js"></script>
-<script>
-    (() => {
-    /* activate Tablesort, isolated in try/catch so a failure here can't block the badge coloring below */
-    try {
-        new Tablesort(document.getElementById('journalArticlesTable'));
-        new Tablesort(document.getElementById('preprintsTable'));
-        new Tablesort(document.getElementById('bookChaptersTable'));
-    } catch (e) {
-        console.error('Tablesort init failed:', e);
-    }
-    })();
-
-    (() => {
-    /* palette & dynamic coloring */
-    const palette = [
-    '#2a9d8f','#e76f51','#0288d1','#f4a261','#264653',
-    '#e9c46a','#8a2be2','#d62828','#6c757d','#ff6b6b',
-    '#4a4e69','#a5a58d','#457b9d','#2b9348','#dda15e',
-    '#577590','#bc6c25','#003f5c','#ffa600','#9a031e',
-    '#1b998b','#2f4858','#ffbf69','#003049','#8d99ae','#ef476f'
-    ];
-    const tagColors = {};
-    let nextColorIndex = 0;
-
-    document.querySelectorAll('.badge').forEach(el => {
-    const cls = Array.from(el.classList).find(c => c.startsWith('tag-'));
-    if (!cls) return;
-    const slug = cls.replace('tag-','');
-    if (!tagColors[slug]) {
-    tagColors[slug] = palette[nextColorIndex++ % palette.length];
-    }
-    el.style.backgroundColor = tagColors[slug];
-    });
-    })();
-</script>
+<h2>Reports</h2>
+<ol>
+    {% for pub in publications %}
+    {% if pub.category == "report" %}
+    <li>
+        {{ pub.authors | replace: "Tripathy, P.", "<strong>Tripathy, P.</strong>" }} ({{ pub.year }}). {{ pub.title }}.
+        <a href="{{ pub.url }}" target="_blank">Link</a>
+        <br>
+        {% if pub.status %}
+        <span class="page__meta">{{ pub.status }}</span>
+        {% elsif pub.venue %}
+        <span class="page__meta"><i>{{ pub.venue }}</i></span>
+        {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+    <li>
+        <strong>Tripathy, P.</strong>, Balakrishnan, K., Malladi, T., Kiran, A., & Bhan, G. (2022). Methods for spatial sampling of urban neighbourhoods by socio-economic status in Indian cities. ILO, New Delhi.
+        <a href="https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Methods-for-spatial-sampling-of-urban/995644132802676" target="_blank">Link</a>
+    </li>
+    <li>
+        Malladi, T., Mayavel, D., Chatterji, N., & <strong>Tripathy, P.</strong> (2018). In A. Revi (Ed.), India Higher Education Atlas [Vols. 4, 5 and 6]. Indian Institute for Human Settlements.
+        <a href="https://iihs.co.in/project/india-higher-education-atlas/" target="_blank">Link</a>
+    </li>
+</ol>
