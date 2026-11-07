@@ -56,6 +56,9 @@ My work runs from measurement to evaluation. I build environmental measurements 
 
 </div>
 
+I am always looking to collaborate with people working in these areas. If this sounds
+like you, feel free to reach out to [ptripathy@ucsb.edu](mailto:ptripathy@ucsb.edu).
+
 ## Funding
 
 - **NASA FINESST** ($150,000), 2025–2028. High-Quality Flood Mapping Using SAR Sensors:
@@ -68,7 +71,3 @@ Agriculture Field Boundaries in the Indo-Gangetic Plain, India.
 Satellites and AI to Map Smallholder Agriculture Field Boundaries With Limited Training Data.
 - **GEO – Microsoft Planetary Computer** ($120,000), 2021. India Flood Monitoring and
 Impact Assessment Portal, as Co-Investigator.
-
-I am always looking to collaborate with people working in these areas, especially my current research
-interests in floods and agriculture, geospatial foundation models, and causal analysis. If this sounds
-like you, feel free to reach out to [ptripathy@ucsb.edu](mailto:ptripathy@ucsb.edu).
