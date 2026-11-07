@@ -6,7 +6,9 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
@@ -39,17 +41,15 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
+<meta name="description" content="PhD candidate in Geography at UC Santa Barbara. I build environmental measurements from satellite imagery and machine learning.">
 <meta property="og:locale" content="{{ site.locale | default: "en" }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="PhD candidate in Geography at UC Santa Barbara. I build environmental measurements from satellite imagery and machine learning.">
 
 {% if seo_url %}
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
-{% endif %}
-
-{% if page.excerpt %}
-  <meta property="og:description" name="description" content="{{ seo_description }}">
 {% endif %}
 
 {% if site.twitter.username %}
@@ -59,19 +59,17 @@
   <meta name="twitter:url" content="{{ canonical_url }}">
 
   {% if page.header.image %}
-    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-  {% else %}
-    <meta name="twitter:card" content="summary">
-    {% if site.og_image %}
-      <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
-    {% endif %}
+  {% elsif site.og_image %}
+    <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
   {% endif %}
 
   {% if seo_author_twitter %}
     <meta name="twitter:creator" content="@{{ seo_author_twitter }}">
   {% endif %}
 {% endif %}
+
+<meta name="twitter:card" content="summary">
 
 {% if site.facebook %}
   {% if site.facebook.publisher %}
@@ -83,16 +81,9 @@
   {% endif %}
 {% endif %}
 
-{% if page.header.image %}
-  <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-{% elsif page.header.overlay_image %}
-  <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-{% endif %}
+<meta property="og:image" content="https://tripathyp.github.io/images/headshot_pt.jpg">
 
-{% if page.date %}
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-{% endif %}
+<meta property="og:type" content="website">
 
 {% if paginator.previous_page %}
   <link rel="prev" href="{{ paginator.previous_page_path | prepend: seo_url }}">

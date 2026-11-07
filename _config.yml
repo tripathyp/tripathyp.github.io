@@ -1,8 +1,8 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Home"
-title_separator          : "-"
+title                    : "Pratyush Tripathy"
+title_separator          : "|"
 name                     : &name "Pratyush Tripathy"
 description              : &description "Pratyush Tripathy is a PhD candidate in Geography at UC Santa Barbara, using satellite data and machine learning to study floods, agriculture, and environmental policy."
 url                      : "https://tripathyp.github.io"
@@ -14,7 +14,7 @@ repository               : "tripathyp/tripathyp.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/headshot_pt.jpg"
+  avatar           : "headshot_pt.jpg"
   name             : "Pratyush Tripathy"
   pronouns         : "he/him/his"
   bio              : "I combine satellites, machine learning, and econometrics to study human and environmental problems."

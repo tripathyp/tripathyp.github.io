@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "About"
+seo_title: "Pratyush Tripathy"
 author_profile: true
 redirect_from: 
   - /about/
