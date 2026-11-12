@@ -136,6 +136,15 @@
   tags:
     - "Urban analysis"
 
+- title: "Cloud-based flood mapping with Sentinel-1 SAR on Google Earth Engine: Insights from the global flood mapper"
+  authors: "Tripathy, P., Agrawal, A., & Koul, S."
+  year: 2026
+  url: "https://doi.org/10.1016/B978-0-443-33803-8.00045-7"
+  category: "book"
+  venue: "Data-Driven Earth Observation for Disaster Management"
+  tags:
+    - "Floods"
+
 - title: "Deep learning approach for monitoring urban land cover changes"
   authors: "Perikamana, K. K., Balakrishnan, K., & Tripathy, P."
   year: 2024
