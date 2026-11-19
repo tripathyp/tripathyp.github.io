@@ -23,8 +23,7 @@ Leiserowitz, A., & Marlon, J. R. (2026). National-scale mapping locates the mism
 and assessed flood risk in India. Under review at *Nature Communications*. 
 Preprint: *EarthArXiv*. [link](https://doi.org/10.31223/X5WZ38)
 * Agrawal, A. & Tripathy, P. (2026). Global Flood Mapper v2: Open-Access Flood Mapping and Exposure 
-Assessment with Sentinel-1 SAR. Accepted at *Natural Hazards*. 
-Preprint: *EarthArXiv*. [link](https://doi.org/10.31223/X54482)
+Assessment with Sentinel-1 SAR. *Natural Hazards*. [link](https://doi.org/10.1007/s11069-026-08511-0)
 * Tripathy, P., Baylis, K., Wu, K., Watson, J., & Jiang, R. (2026). Zero-shot inference strategies for 
 smallholder (< 0.1 ha) agriculture field delineation with the Segment Anything foundation model. 
 *Science of Remote Sensing*, 100425. [link](https://doi.org/10.1016/j.srs.2026.100425)
